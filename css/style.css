@@ -391,6 +391,15 @@ div.left{text-align:left}
 p.left{text-align:left}
 div.languages{text-align:right; font-size: 12px}
 .orbit-container{text-align:center!important;height:400px!important}
+.orbit-container-small{
+	text-align:center!important;
+	height:150px!important;
+	    position: relative;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+	}
+
 .orbit-container-gioielli{
    position: relative;
   height: auto !important;
