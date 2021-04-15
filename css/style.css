@@ -1,13 +1,47 @@
 @import url(font-awesome.css);
+@media only screen  {
 body{font-family:droid-sans-mono;font-size:17px}
 h1{font-family:droid-sans-mono;font-size:60px;text-align:center;font-weight:600;}
 h2{font-family:droid-sans-mono;font-size:32px;text-align:center;font-weight:400;}
+h3{font-family:droid-sans-mono;font-size:30px;text-align:center;font-weight:600;}
+body.is-reveal-open{font-size:17px !important;}
+.btn-link3 {
+  font-family: droid-sans-mono;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  border: 2px solid black;
+  background-color: white;
+  color: black !important;
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius:10px;
+  width: 230px !important;
+  margin-bottom: 12px;
+}
+}
 
-h1.h1-small-menu{font-family:droid-sans-mono;font-size:34px;text-align:center;font-weight:600;}
-h2.h2-small-menu{font-family:droid-sans-mono;font-size:18px;text-align:center;font-weight:400;}
+body{font-family:droid-sans-mono;font-size:15px}
+h1{font-family:droid-sans-mono;font-size:34px;text-align:center;font-weight:600;}
+h2{font-family:droid-sans-mono;font-size:18px;text-align:center;font-weight:400;}
+h3{font-family:droid-sans-mono;font-size:26px;text-align:center;font-weight:600;}
+
+.btn-link3 {
+  font-family: droid-sans-mono;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  border: 2px solid black;
+  background-color: white;
+  color: black !important;
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius:10px;
+  width: 200px !important;
+  margin-bottom: 12px;
+}
 
 h2.medium{font-weight:600;}
-h3{font-family:droid-sans-mono;font-size:30px;text-align:center;font-weight:600;}
 @font-face{font-family:federo;src:url(../fonts/federo.regular.ttf) format('truetype');font-weight:400;font-style:normal}
 @font-face{font-family:droid-sans-mono;src:url(../fonts/droid-sans-mono.regular.ttf) format('truetype');font-weight:400;font-style:normal}
 @font-face{font-family:Alice-Regular;src:url(../fonts/Alice-Regular.ttf) format('truetype');font-weight:400;font-style:normal}
@@ -132,21 +166,6 @@ hr {     max-width: 100% !important;}
   border-radius:10px;
 }
 
-.btn-link3 {
-  font-family: droid-sans-mono;
-  text-align: center;
-  font-weight: 500;
-  font-size: 18px;
-  border: 2px solid black;
-  background-color: white;
-  color: black !important;
-  padding: 14px 28px;
-  cursor: pointer;
-  border-radius:10px;
-  width: 230px !important;
-  margin-bottom: 12px;
-}
-
 .success3 {
   border-color: black;
   color: black;
@@ -173,10 +192,6 @@ div.background {
 	background-size: cover;
 }
 
-div.body-small
-{
-	font-size: 15px;
-}
 
 p
 {
@@ -390,6 +405,7 @@ p.right{text-align:right}
 div.left{text-align:left}
 p.left{text-align:left}
 div.languages{text-align:right; font-size: 12px}
+
 .orbit-container{text-align:center!important;height:400px!important}
 .orbit-container-small{
 	text-align:center!important;
