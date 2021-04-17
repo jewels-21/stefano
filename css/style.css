@@ -48,6 +48,8 @@ h3.h3-small-menu{font-family:droid-sans-mono;font-size:26px;text-align:center;fo
 }
 
 h2.medium{font-weight:600;}
+h2.medium-small{font-size:18px;font-weight:600;}
+
 @font-face{font-family:federo;src:url(../fonts/federo.regular.ttf) format('truetype');font-weight:400;font-style:normal}
 @font-face{font-family:droid-sans-mono;src:url(../fonts/droid-sans-mono.regular.ttf) format('truetype');font-weight:400;font-style:normal}
 @font-face{font-family:Alice-Regular;src:url(../fonts/Alice-Regular.ttf) format('truetype');font-weight:400;font-style:normal}
@@ -58,7 +60,7 @@ h2.medium{font-weight:600;}
   font-family: droid-sans-mono;
   text-align: center;
   font-weight: 500;
-  font-size: 18px
+  font-size: 18px;
 }
 .snip1135 * {
   box-sizing: border-box;
@@ -357,8 +359,8 @@ section{
 button.contacts{
       align-self:center;
       background:transparent;
-      padding:2rem 2rem;
-      margin:0 1rem;
+      padding: 0.5rem 0.5rem;
+      
       transition:all .5s ease;
       color:#41403E;
      
@@ -501,6 +503,14 @@ div.myDIV
 img.storia
 {
 	float: left;
+}
+
+img.storia-small
+{
+	float: left;
+	width: 80% !important;
+	height: auto;
+	text-align: center !important;
 }
 
 h3.blue 
