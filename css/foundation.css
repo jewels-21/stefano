@@ -4639,7 +4639,7 @@ html.is-reveal-open body {
 
 
 top: 50vh !important;
-transform: translateY(-50%);
+/**transform: translateY(-50%);**/
 min-height: 10vh;
 height: auto !important;
 

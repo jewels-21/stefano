@@ -26,7 +26,7 @@ h3{font-family:droid-sans-mono;font-size:30px;text-align:center;font-weight:600;
   margin-bottom: 12px;
 }
 
-
+p.body-small{font-family:droid-sans-mono;font-size:15px;}
 div.body-small{font-family:droid-sans-mono;font-size:15px}
 h1.h1-small-menu{font-family:droid-sans-mono;font-size:34px;text-align:center;font-weight:600;}
 h2.h2-small-menu{font-family:droid-sans-mono;font-size:18px;text-align:center;font-weight:400;}
@@ -190,11 +190,31 @@ hr {     max-width: 100% !important;}
   color: black !important;
 }
 
+.alignleft { float: left; padding: 5px 15px 0 0; }
 
 .close-button {
     color: white !important;
 }
 
+.close-button-small {
+  position: absolute;
+  color: black !important;
+  cursor: pointer; }
+  [data-whatinput='mouse'] .close-button-small {
+    outline: 0; }
+  .close-button-small:hover, .close-button-small:focus {
+    color: #0a0a0a; }
+  .close-button-small.small {
+    right: 0.66rem;
+    top: 0.33em;
+    font-size: 1.5em;
+    line-height: 1; }
+  .close-button-small, .close-button-small.medium {
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2em;
+    line-height: 1; }
+	
 div.background {
 	background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('../images/gioielli/3_stefano890b.jpg');
 	background-size: cover;
@@ -204,6 +224,7 @@ div.background {
 p
 {
 	font-size: 15px;
+	margin-bottom: 0 !important;
 }
 
 [type='email2'],
@@ -394,6 +415,7 @@ td{
 	text-align: left !important;
 }
 
+reveal < collana { width: 40% !important; }
 
 .home
 {
@@ -417,7 +439,7 @@ div.languages{text-align:right; font-size: 12px}
 .orbit-container{text-align:center!important;height:400px!important}
 .orbit-container-small{
 	text-align:center!important;
-	height:150px!important;
+	height:130px!important;
 	    position: relative;
     margin: 0;
     list-style: none;
@@ -500,9 +522,10 @@ div.myDIV
 	display:none;
 }
 
-img.storia
+.storia
 {
-	float: left;
+	/**float: left;**/
+	width:40%;
 }
 
 img.storia-small
