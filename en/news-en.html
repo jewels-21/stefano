@@ -311,7 +311,7 @@ Along with Stefano Fronza, the exhibition was attended by the following artists:
                        <div class="chisono" >
 					   <figure>
 					   <a href="#" data-open="mostraFermento"><img src="../images/news/5_maggio 2020_mostra online GIOIELLI IN FERMENTO 2020/testata.png"
-					   alt="foto gioielli fermento" ></a>
+					   alt="foto gioielli fermento"></a>
 					   </figure>
 					   </br>
 					   </br>
@@ -326,8 +326,7 @@ Upon reaching its 10th edition, the contest "Premio Città Castel San Giovanni" 
 								   
 <a href="https://gioiellinfermento.com/2020/12/22/catalogo-2021-1/" target="_blank" class="href-menu">More infos and a virtual tour of the online exhibition</a>
 	</br></br>
-Stefano Fronza's selected jewel can be viewed in a  
-<a href="https://gioiellinfermento.com/2020/12/22/catalog-2021-1/#jp-carousel-7100" target="_blank" class="href-menu">dedicated space</a> as well
+<a href="https://gioiellinfermento.com/2020/12/22/catalog-2021-1/#jp-carousel-7100" target="_blank" class="href-menu">View selected jewel</a>
 
 	
                                 </div>
@@ -442,51 +441,6 @@ The programme of the 10th edition of Venice Design Week includes a special secti
 <script src="../js/vendor/foundation.js"></script>
 <script src="../js/app.js"></script>
 
-<script>
-var tag = document.createElement('script');
-    tag.src = "http://www.youtube.com/player_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    function onYouTubePlayerAPIReady() { //Important to set up the the modal inside this function, not the other way around
-        $('.feature-modal-btn').on('click', function(e){
-        	//alert('yes!');
-            e.preventDefault();
-            var $btn = $(this);
-            var modal = $btn.attr('href');
-            var ytVideoID = $btn.data('ytvideoid');
-
-            var player;
-
-            $(modal).reveal({
-                animation: 'fade',
-                opened: function() { //After the modal is done opening
-                    player = new YT.Player('feature-video', { //Add the player
-                        //height: '315',
-                        width: '800',
-                        videoId: ytVideoID, //ytVideoID is the variable that holds my youtube video ID
-                        playerVars: {
-                            rel            : 0,
-                            theme          : 'light',
-                            showinfo       : 0,
-                            showsearch     : 0,
-                            autoplay       : 1,
-                            autohide       : 1,
-                            modestbranding : 1
-                        },
-                        events: {
-                            
-                        }
-                    });
-                },
-                close: function() { //When closing the modal is initiated
-                    $('#videoLight .flex-video iframe').remove(); // Remove the video to shut it down
-                    $('#videoLight .flex-video').append('<div id="feature-video" />'); //Add the div again for next time
-                }
-            });
-        });
-    }
-</script>
 <script>
             $(".href-menu > ul").hide().parent().hover(function (event) {
                 $(this).children("ul").slideToggle(event.type === "mouseenter");
