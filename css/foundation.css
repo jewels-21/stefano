@@ -4414,7 +4414,7 @@ select {
     height: auto !important;
 	margin-bottom: 0;
   padding: 1rem;
-  background-color: rgba(10, 10, 10, 0.5);
+  background-color: fefefe;
   color: #fefefe; }
 
 .orbit-previous, .orbit-next {
@@ -4638,7 +4638,7 @@ html.is-reveal-open body {
       border-radius: 0;
 
 
-top: 50vh !important;
+top: 5vh !important;
 /**transform: translateY(-50%);**/
 min-height: 10vh;
 height: auto !important;
