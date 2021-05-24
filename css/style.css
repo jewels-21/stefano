@@ -11,6 +11,37 @@ h1{font-family:droid-sans-mono;font-size:60px;text-align:center;font-weight:600;
 h2{font-family:droid-sans-mono;font-size:32px;text-align:center;font-weight:400;}
 h3{font-family:droid-sans-mono;font-size:30px;text-align:center;font-weight:600;}
 
+.page-news .reveal-overlay {
+  background-color: grey;
+ }
+ 
+ .page-news .reveal.small {
+     border: 0 !important;   
+    background: grey;
+ }
+
+ .page-news .reveal.large {
+     border: 0 !important;   
+    background: grey;
+ }
+ 
+/*.fa-whatsapp  {
+  font-size: 1.4em;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color:#25d366;
+	border-radius: 50%;
+}*/
+
 .btn-link3 {
   font-family: droid-sans-mono;
   text-align: center;
@@ -433,6 +464,7 @@ table.unstriped
 table.chi-sono,tbody.chi-sono,td.chi-sono,th.chi-sono,tr.chi-sono{background:0 0!important;border:none!important;font-size:12px!important;padding:0!important;vertical-align:top!important;text-align:left}
 
 .href-menu{text-align:center !important;color:#1779ba !important;position:relative;text-decoration:none}
+.href-mail{color:gray !important;}
 .href-menu:hover{color:#1779ba !important}
 div.right{text-align:right}
 div.rightFoto{text-align:right; padding-right: 20px;}
@@ -552,6 +584,8 @@ h3.blue
 #return-to-top i{color:#fff;margin:0;position:relative;left:16px;top:13px;font-size:19px;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-ms-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}
 #return-to-top:hover{background:black}
 #return-to-top:hover i{color:#fff;top:5px}div.center{text-align:center}div.right{text-align:right}div.center-small{font-size:1.1rem;text-align:center}
+div.center-video{text-align:center; padding: 15px;}
+
 .chi-sono-small{
 	font-size:13px;
 	padding:15px;text-align:justify
