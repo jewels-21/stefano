@@ -1,2 +1,2 @@
-# stefano
-sito stefano
+# stefanofronza.github.io
+Sito web Stefano Fronza - gioielli d'autore
