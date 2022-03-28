@@ -7,7 +7,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="description" content="">
     <meta name="abstract" content="">
-    <meta name="keywords" content="stefano,fronza,gioielli,Gioielli d'autore,Trento,Easy Living,news,novità,Music,Luce Light,Glimpses,window,collezioni,stanze,esposizione,Gioielli in Fermento,Jewelry Selection 2019,Scatenata,mostra,between,Rebirth,rinascita,Vittorio,Sgarbi,Opere,Foto,Skin,Onda,Perla,Oro,puro,Pure,gold,Pearl,Thereza Pedrosa Gallery,Studio Marijke,Alternatives,Gallery,Wave,Profilo,News,Micaela Vettori,Premio,Alba Cappellieri,Livia Tenuta,Monument,Risorsa,Titanio,Alluminio,Dibond,Lambda,Movimento">
+    <meta name="keywords" content="stefano,fronza,gioielli,Gioielli d'autore,Trento,Easy Living,news,novità,Music,Luce Light,Glimpses,window,collezioni,stanze,esposizione,Gioielli in Fermento,Jewelry Selection 2019,Scatenata,mostra,between,Rebirth,rinascita,Vittorio,Sgarbi,Opere,Foto,Skin,Onda,Perla,Oro,puro,Pure,gold,Pearl,Thereza Pedrosa Gallery,Studio Marijke,Alternatives,Gallery,Wave,Profilo,News,Micaela Vettori,Premio,Alba Cappellieri,Livia Tenuta,Monument,Risorsa,Titanio,Alluminio,Dibond,Lambda,Movimento,In Blue">
     <link rel="canonical" href="www.stefanofronza.com/news-en.html">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/foundation.css">
@@ -1089,7 +1089,7 @@
         Inside the artistic journey of Stefano Fronza the Rovereto performance represents the point of arrival of an interdisciplinary project that saw the light in 2001 and that prompted
         the Culture Department of the
         Municipality of Trento to award him a scholarship abroad. The research took place in the Netherlands and was focused on the possible interaction among different
-        artistic languages.<b>Alchimie nell'aria</b> exemplifies and, at the same time, documents such interaction.
+        artistic languages. <b>Alchimie nell'aria</b> exemplifies and, at the same time, documents such interaction.
         Music: live performance by "Associazione Labirinti armonici" from Trento;
         Written word: poetical interludes by Micaela Vettori marking the progress of the video; Cinematography: in the making of the video, the shootings by Filippo Forti, the photographs by
         <a href="https://www.fotonadiabaldo.it/" class="href-menu" target="_blank">Nadia Baldo</a> and <a href="http://www.moniquefoto.com/" class="href-menu"
@@ -1253,7 +1253,13 @@
 <script src="../js/vendor/foundation.js"></script>
 <script src="../js/app.js"></script>
 <script src="../js/lazysizes.min.js" async></script>
+<script>
+</script>
 <script type="text/javascript">
+    //imposta visualizzazione video alchimie da 2 secondi
+    document.getElementById('alchimie').addEventListener('loadedmetadata', function () {
+        this.currentTime = 2;
+    }, false);
     function parseJSAtOnload() {
         var element = document.createElement("script");
         element.src = "../js/vendor/foundation.js";
@@ -1268,9 +1274,6 @@
     else if (window.attachEvent)
         window.attachEvent("onload", parseJSAtOnload);
     else window.onload = parseJSAtOnload;
-    document.getElementById('alchimie').addEventListener('loadedmetadata', function () {
-        this.currentTime = 2;
-    }, false);
 </script>
 </body>
 </div>
