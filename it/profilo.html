@@ -35,7 +35,7 @@
             fetch("header.html")
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("menu-container").innerHTML = data;
+                    document.getElementById("headerContent").innerHTML = data;
                     // Aggiungi il JavaScript per evidenziare la voce di menu corrente
                     var currentPage = window.location.pathname.split("/").pop();
                     var links = document.querySelectorAll("#menu2 a");
