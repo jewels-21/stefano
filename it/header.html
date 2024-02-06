@@ -45,7 +45,7 @@
         <li style="margin-right: 40px;">
 					<a href="#">chi sono</a>
 					<ul class="vertical menu" style="font-size:17px;">
-						<li><a href="profilo.html">profilo</a></li>
+						<li><a href="profilo.html" id="profilo">profilo</a></li>
 						<li><a href="la_mia_storia.html">la mia storia</a></li>
 						<li><a href="../curriculum/CV_StefanoFronza.pdf" target="_blank">curriculum</a></li>
 					</ul>
@@ -87,11 +87,11 @@
 	<script>
         document.addEventListener("DOMContentLoaded", function () {
             var currentPage = window.location.pathname.split("/").pop();
-            var links = document.querySelectorAll("#menu2 a");
-            links.forEach(function (link) {
-                if (link.getAttribute("href") === currentPage) {
-                    link.classList.add("current");
-                }
-            });
+            
+			
+			if (currentPage === "profilo.html") {
+  document.getElementById("profilo").classList.add("current");
+
+
         });
     </script>
