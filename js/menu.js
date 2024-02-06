@@ -1,16 +1,11 @@
 <script>
-    // Ottieni il percorso della pagina corrente
-    var currentPath = window.location.pathname;
-
-    // Rimuovi la classe "current" da tutti i link nel menu
-    var menuLinks = document.querySelectorAll('#menu2 a');
-    menuLinks.forEach(function(link) {
-        link.classList.remove('current');
+    document.addEventListener("DOMContentLoaded", function () {
+        var currentPage = window.location.pathname.split("/").pop();
+        var links = document.querySelectorAll("#menu2 a");
+        links.forEach(function (link) {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("current");
+            }
+        });
     });
-
-    // Aggiungi la classe "current" al link corrispondente alla pagina corrente
-    var currentLink = document.querySelector('#menu2 a[href="' + currentPath + '"]');
-    if (currentLink) {
-        currentLink.classList.add('current');
-    }
 </script>

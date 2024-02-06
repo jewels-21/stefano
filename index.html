@@ -29,7 +29,26 @@
 <body>
     <a id="return-to-top" alt="Torna in cima alla pagina"><i class="fa fa-chevron-up"></i></a>
     
-	<div id="headerContent"></div>
+	<div id="headerContent">
+        <!-- Includi il menu -->
+        <!-- Modifica il percorso del file se necessario -->
+        <script>
+            fetch("index_header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("headerContent").innerHTML = data;
+                    // Aggiungi il JavaScript per evidenziare la voce di menu corrente
+                    var currentPage = window.location.pathname.split("/").pop();
+                    var links = document.querySelectorAll("#menu2 a");
+                    links.forEach(function (link) {
+                        if (link.getAttribute("href") === currentPage) {
+                            link.classList.add("current");
+                        }
+                    });
+                });
+        </script>
+    </div>
+	
 
 	</br>
     <div class="show-for-medium">
@@ -189,7 +208,7 @@
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
     <script src="js/lazysizes.min.js" async></script>
-	<script src="js/menu.js"></script>
+	
     <script>
         $(".href-menu > ul").hide().parent().hover(function (event) {
             $(this).children("ul").slideToggle(event.type === "mouseenter");
@@ -207,13 +226,25 @@
     </script>
 	<script> 
     $(function(){
-      $("#headerContent").load("it/header.html"); 
+      $("#headerContent").load("index_header.html"); 
     });
     </script> 
 	<script> 
     $(function(){
-      $("#footerContent").load("it/footer.html"); 
+      $("#footerContent").load("index_footer.html"); 
     });
     </script> 
+	
+	<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentPage = window.location.pathname.split("/").pop();
+            var links = document.querySelectorAll("#menu2 a");
+            links.forEach(function (link) {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("current");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
