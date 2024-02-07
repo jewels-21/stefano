@@ -26,11 +26,94 @@
 	<meta name="twitter:title" content="Sito web Stefano Fronza | Gioielli d'autore" />
 	<meta name="twitter:image" content="http://www.stefanofronza.com/images/anteprima.jpg" />
     <title>Stefano Fronza | Gioielli d'autore | The mirror</title>
+<script>
+    var baseUrl = "/stefano/";
+	</script>
+	<script>
+    document.write('<link rel="stylesheet" href="' + baseUrl + 'css/font-awesome.min.css">');
+	document.write('<link rel="stylesheet" href="' + baseUrl + 'css/foundation.css">');
+	document.write('<link rel="stylesheet" href="' + baseUrl + 'css/style.css">');
+	document.write('<script src="' + baseUrl + 'js/vendor/jquery.js"><\/script>');
+	document.write('<script src="' + baseUrl + 'js/app.js"><\/script>');
+	document.write('<script src="' + baseUrl + 'js/lazysizes.min.js"><\/script>');
+	</script>
+
 </head>
 <div>
-    <body>
+    <body class="page-news" style="font-size: 14px">
         <a id="return-to-top" alt="Torna in cima alla pagina"><i class="fa fa-chevron-up"></i></a>
-        <div id="headerContent"></div>
+     	<div class="row column text-center">
+            <div class="show-for-medium">
+                </br>
+                <a href="../../index.html" class="home"><h1>Stefano Fronza</h1></a>
+                <a href="../../index.html" class="home"><h2>gioielli d'autore</h2></a>
+            </div>
+            </br>
+            <div class="show-for-small-only">
+                <a href="../../index.html" class="home"><h1 class="h1-small-menu">Stefano Fronza</h1></a>
+                <a href="../../index.html" class="home"><h2 class="h2-small-menu">gioielli d'autore</h2></a>
+            </div>
+        </div>
+        <hr>
+        <div class="top-bar right">
+            <div class="top-bar-right">
+                <div class="show-for-medium" style="margin-top: -5px;">
+					<button><a href="the_mirror.html" style="margin-right: 7px;">IT</a></button>
+					<button><a href="../en/the_mirror-en.html">EN</a></button>
+                </div>
+                <div class="show-for-small-only">
+                    <button><a href="the_mirror.html" style="margin-right: 7px;">IT</a></button>
+					<button><a href="../en/the_mirror-en.html">EN</a></button>
+                </div>
+            </div>
+        </div>
+		<div class="title-bar" data-responsive-toggle="menu2" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="menu2"></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+		<div id="menu2">
+			<ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown"
+				style="margin: 0 auto;
+					width: fit-content; font-family: droid-sans-mono;
+					font-weight: 500;
+					font-size: 18px;">
+				<li style="margin-right: 40px;">
+					<a href="../index.html">home</a>
+				</li>
+				<li style="margin-right: 40px;">
+					<a href="#">chi sono</a>
+					<ul class="vertical menu" style="font-size:17px;">
+						<li><a href="../chi_sono/profilo.html">profilo</a></li>
+						<li><a href="../chi_sono/la_mia_storia.html">la mia storia</a></li>
+						<li><a href="../../curriculum/CV_StefanoFronza.pdf" target="_blank">curriculum</a></li>
+					</ul>
+				</li>
+				<li style="margin-right: 40px;">
+					<a href="#">gioielli</a>
+					<ul class="vertical menu" style="font-size:17px;">
+						<li><a href="../concept.html">concept</a></li>
+						<li><a href="#" class="current">lavori</a>
+							<ul class="vertical menu" style="min-width:330px !important;font-size:17px;">
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'it/lavori/the_mirror.html'"  class="current">the mirror</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'it/lavori/easy_living.html'">easy living</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'it/lavori/glimpses.html'">glimpses through the window</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'it/lavori/between_music.html'">between music and rebirth</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li style="margin-right: 40px;">
+					<a href="#" class="current">news</a>
+					<ul class="vertical menu" style="font-size:17px;">
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'it/news/news_2023.html'">2023</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'it/news/news_2022.html'">2022</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'it/news/news_2021.html'">2021</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'it/news/archivio_news.html'">archivio</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'it/contatti.html'">contatti</a></li>
+			</ul>
+		</div>
         </br>
 		</br>
         <div class="grid-x grid-padding-x center fluid">
@@ -223,34 +306,79 @@ Linee di luce simmetriche e perfette, proteggono la creatura innocente che emerg
         </br>
         <hr />
 		
-        <div id="footerContent"></div>
+<footer>
+        Copyright © 2024 Stefano Fronza - Trento (Italia) | All Rights Reserved</br>
+        Testi <em>Micaela Vettori</em></br>
+        <div class="social">
+			<div class="show-for-medium">
+				<!--<a href="https://www.facebook.com/stefanogioiellifronza" target="_blank"><i class="fa fa-facebook"></i></a> | <a href="https://www.instagram.com/stefano.fronza23/" target="_blank"><i class="fa fa-instagram"></i></a>
+				| <a href="https://wa.me/393203315409" target="_blank"><i class="fa fa-whatsapp"></i></a> | <a href="https://www.agc-it.org/it/soci/477-stefano-fronza.html" target="_blank"><img src="../images/logo_agc.png" width="2.5%" alt="logo AGC" /></a>-->
+				<a href="https://www.agc-it.org/it/soci/477-stefano-fronza.html" target="_blank"><img src="../../images/logo_agc.png" width="2.5%" alt="logo AGC" /></a> | <a href="https://klimt02.net/jewellers/stefano-fronza" target="_blank"><img src="https://klimt02.net/images/logo_web_150.png" width="4%" alt="logo Klimt" /></a>
+			</div>
+			<div class="show-for-small-only">
+				 <!--<a href="https://www.facebook.com/stefanogioiellifronza" target="_blank"><i class="fa fa-facebook"></i></a> | <a href="https://www.instagram.com/stefano.fronza23/" target="_blank"><i class="fa fa-instagram"></i></a>
+				| <a href="https://wa.me/393203315409" target="_blank"><i class="fa fa-whatsapp"></i></a> | <a href="https://www.agc-it.org/it/soci/477-stefano-fronza.html" target="_blank"><img src="../images/logo_agc.png" width="11%" height="auto" alt="logo AGC" /></a>-->
+				<a href="https://www.agc-it.org/it/soci/477-stefano-fronza.html" target="_blank"><img src="../../images/logo_agc.png" width="11%" alt="logo AGC" /></a> | <a href="https://klimt02.net/jewellers/stefano-fronza" target="_blank"><img src="https://klimt02.net/images/logo_web_150.png" width="15%" alt="logo Klimt" /></a>
+			</div>
+		</div>
+		</br>
+		Ultimo aggiornamento: febbraio 2024
+        </br>
+    </footer>
+	
+	<div class="show-for-medium">
+        <br />
+    </div>
 
 </form>
-<script src="../../js/vendor/jquery.js"></script>
-<script src="../../js/vendor/foundation.js"></script>
-<script src="../../js/app.js"></script>
-<script src="../../js/lazysizes.min.js" async></script>
-<script type="text/javascript">
-    function parseJSAtOnload() {
-        var element = document.createElement("script");
-        element.src = "../../js/vendor/foundation.js";
-        document.body.appendChild(element);
-        element.src = "../../js/vendor/jquery.js";
-        document.body.appendChild(element);
-        element.src = "../../js/app.js";
-        document.body.appendChild(element);
-    }
-</script>
-<script> 
-    $(function(){
-      $("#headerContent").load("../header.html"); 
-    });
-    </script> 
+
+<script>
+        $(".href-menu > ul").hide().parent().hover(function (event) {
+            $(this).children("ul").slideToggle(event.type === "mouseenter");
+        });
+    </script>
+    <script type="text/javascript">
+        function parseJSAtOnload() {
+            var element = document.createElement("script");
+            element.src = "../../js/vendor/foundation.js";
+            document.body.appendChild(element);
+            element.src = "../../js/vendor/jquery.js";
+            document.body.appendChild(element);
+        }
+       
+    </script>
+	
 	<script> 
-    $(function(){
-      $("#footerContent").load("../footer.html"); 
-    });
-    </script> 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Open the modal
+function openModal() {
+  document.getElementById('modal').style.display = "block";
+}
+
+// Close the modal
+function closeModal() {
+  document.getElementById('modal').style.display = "none";
+}
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Display the slides
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slideshow-img");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+</script>
 </body>
 </div>
 </html>
