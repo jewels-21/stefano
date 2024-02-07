@@ -115,19 +115,16 @@
       $("#footerContent").load("footer.html"); 
     });
     </script> 
-	
-	
 	<script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var currentPage = window.location.pathname.split("/").pop();
-            
-			
-			if (currentPage === "profilo.html") {
-				document.getElementById("profilo").classList.add("current");
+    document.addEventListener("DOMContentLoaded", function () {
+        var currentPage = window.location.pathname.split("/").pop();
+        
+        if (currentPage === "profilo.html") {
+            document.getElementById("profilo").classList.add("current");
+        }
+    });
+</script>
 
-
-        });
-    </script>
 </body>
 </div>
 </html>
