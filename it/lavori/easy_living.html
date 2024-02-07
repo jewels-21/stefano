@@ -26,6 +26,87 @@
 	<meta name="twitter:title" content="Sito web Stefano Fronza | Gioielli d'autore" />
 	<meta name="twitter:image" content="http://www.stefanofronza.com/images/anteprima.jpg" />
     <title>Stefano Fronza | Gioielli d'autore | Easy living</title>
+	
+	
+	<style>
+/* Styling for the modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal content */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Styling for the slideshow images */
+.slideshow-img {
+  width: 100%;
+}
+
+/* Styling for the previous and next buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Position the previous button on the left side */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the next button on the right side */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* When hovering over the buttons, change background color */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Close button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
 </head>
 <div>
     <body>
@@ -176,7 +257,23 @@
             </br>
         </div>
         <div class="reveal small" id="modalFigura" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg">
+		
+			<span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+    <span class="next" onclick="plusSlides(1)">&#10095;</span>
+	
+	<div class="slideshow-img" style="display:block">
+	<img class="lazyload" data-src="../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg">
+            <div class="show-for-small-only">
+                <button class="close-button-small" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <p><b>Vision</b> </br> spilla | 13,5x10x1,4 cm | stampa su Dibond, alluminio e titanio</p>
+            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			
+    </div>
+	<div class="slideshow-img" style="display:none">
+	<img class="lazyload" data-src="../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg">
             <div class="show-for-small-only">
                 <button class="close-button-small" data-close aria-label="Close modal" type="button">
                     <span aria-hidden="true">&times;</span>
@@ -184,6 +281,28 @@
             </div>
             <p><b>Figura femminile</b> </br> spilla | 13x7x1,7 cm | stampa Lambda su alluminio, Pvc, titanio</p>
             <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			
+    </div>
+	<div class="slideshow-img" style="display:none">
+	<img class="lazyload" data-src="../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg">
+            <div class="show-for-small-only">
+                <button class="close-button-small" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <p><b>Riproduzione</b> </br> spilla | 13x6,4x1,9 cm stampa su alluminio, Pvc, titanio</p>
+            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			
+    </div>
+	
+	
+	
+	
+            <div class="show-for-small-only">
+                <button class="close-button-small" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
         </div>
         <div class="reveal small" id="modalSpillaRiproduzione" data-reveal>
             <img class="lazyload" data-src="../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg">
@@ -368,6 +487,41 @@
       $("#footerContent").load("../../footer.html"); 
     });
     </script> 
+	
+	
+<script> 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Open the modal
+function openModal() {
+  document.getElementById('modalMiracle').style.display = "block";
+}
+
+// Close the modal
+function closeModal() {
+  document.getElementById('modalMiracle').style.display = "none";
+}
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Display the slides
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slideshow-img");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+</script>
+
+
 </body>
 </div>
 </html>
