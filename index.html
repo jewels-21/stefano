@@ -29,27 +29,8 @@
 <body>
     <a id="return-to-top" alt="Torna in cima alla pagina"><i class="fa fa-chevron-up"></i></a>
     
-	<div id="headerContent">
-        <!-- Includi il menu -->
-        <!-- Modifica il percorso del file se necessario -->
-        <script>
-            fetch("index_header.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("headerContent").innerHTML = data;
-                    // Aggiungi il JavaScript per evidenziare la voce di menu corrente
-                    var currentPage = window.location.pathname.split("/").pop();
-                    var links = document.querySelectorAll("#menu2 a");
-                    links.forEach(function (link) {
-                        if (link.getAttribute("href") === currentPage) {
-                            link.classList.add("current");
-                        }
-                    });
-                });
-        </script>
-    </div>
-	
-
+	<div id="headerContent"/>
+      	
 	</br>
     <div class="show-for-medium">
         <div class="orbit" role="region" aria-label="Anteprima gioielli" data-orbit>
@@ -226,7 +207,12 @@
     </script>
 	<script> 
     $(function(){
-      $("#headerContent").load("index_header.html"); 
+        $("#headerContent").load("index_header.html", function() {
+            var currentPage = window.location.pathname.split("/").pop();
+            if (currentPage === "index.html") {
+                document.getElementById("home-link").classList.add("current");
+            }
+        }); 
     });
     </script> 
 	<script> 
