@@ -2,6 +2,11 @@
     <link rel="stylesheet" href="../../css/style.css">
 	<link rel="stylesheet" href="../../css/font-awesome.min.css">
 	
+	<!-- Definisci la parte comune del percorso come una variabile -->
+<script>
+    var baseUrl = "/stefano/it/";
+</script>
+
 	<div class="row column text-center">
         <div class="show-for-medium">
             </br>
@@ -53,13 +58,13 @@
 				<li style="margin-right: 40px;">
 					<a href="#">gioielli</a>
 					<ul class="vertical menu" style="font-size:17px;">
-						<li><a href="concept/concept.html" id="concept">concept</a></li>
+						<li><a href="/stefano/it/concept.html" id="concept">concept</a></li>
 						<li><a href="#">lavori</a>
 							<ul class="vertical menu" style="min-width:330px !important;font-size:17px;">
-								<li><a href="lavori/the_mirror.html" id="the_mirror">the mirror</a></li>
-								<li><a href="lavori/easy_living.html" id="easy_living">easy living</a></li>
-								<li><a href="lavori/glimpses.html" id="glimpses">glimpses through the window</a></li>
-								<li><a href="lavori/between_music.html" id="between">between music and rebirth</a></li>
+								<li><a href="/stefano/it/lavori/the_mirror.html" id="the_mirror">the mirror</a></li>
+								<li><a href="/stefano/it/lavori/easy_living.html" id="easy_living">easy living</a></li>
+								<li><a href="/stefano/it/lavori/glimpses.html" id="glimpses">glimpses through the window</a></li>
+								<li><a href="/stefano/it/lavori/between_music.html" id="between">between music and rebirth</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -67,10 +72,10 @@
 				<li style="margin-right: 40px;">
 					<a href="#">news</a>
 					<ul class="vertical menu" style="font-size:17px;">
-						<li><a href="/it/news/news_2023.html" id="2023">2023</a></li>
-						<li><a href="news/news_2022.html" id="2022">2022</a></li>
-						<li><a href="news/news_2021.html" id="2021" >2021</a></li>
-						<li><a href="news/archivio_news.html" id="archivio">archivio</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'news/news_2023.html'">2023</a></li>
+						<li><a href="/stefano/it/news/news_2022.html" id="2022">2022</a></li>
+						<li><a href="/stefano/it/news/news_2021.html" id="2021" >2021</a></li>
+						<li><a href="/stefano/it/news/archivio_news.html" id="archivio">archivio</a></li>
 					</ul>
 				</li>
 				<li><a href="contatti.html" id="contatti">contatti</a></li>
