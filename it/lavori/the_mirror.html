@@ -38,6 +38,85 @@
 	document.write('<script src="' + baseUrl + 'js/lazysizes.min.js"><\/script>');
 	</script>
 
+	<style>
+/* Styling for the modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal content */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Styling for the slideshow images */
+.slideshow-img {
+  width: 100%;
+}
+
+/* Styling for the previous and next buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Position the previous button on the left side */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the next button on the right side */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* When hovering over the buttons, change background color */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Close button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
 </head>
 <div>
     <body class="page-news" style="font-size: 14px">
@@ -131,34 +210,34 @@
             <div class="large-1 cell">
             </div>
             <div class="large-12 cell center">
-                <a data-open="modalMiracle" class="thumbnail">
+                <a data-open="modal1" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/The Mirror/1.jpg"
                          alt="A miracle" width="30%" height="30%">
                 </a>			
                 </br>
-                <a data-open="modalNature" class="thumbnail">
+                <a data-open="modal2" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/The Mirror/2.jpg"
                          alt="Nature" width="30%" height="30%" >
                 </a>
-                <a data-open="modalChildren" class="thumbnail">
+                <a data-open="modal3" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/The Mirror/3.jpg"
                          alt="Children" width="30%" height="30%" style="margin-left: 15%;">
                 </a>
 				</br>
-				<a data-open="modalChevrolet" class="thumbnail">
+				<a data-open="modal4" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/The Mirror/4.jpg"
                          alt="Chevrolet" width="30%" height="30%">
                 </a>
                 </br>
-				 <a data-open="modalVenezia" class="thumbnail">
+				 <a data-open="modal5" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/The Mirror/5.jpg"
                          alt="Venezia" width="30%" height="30%" style="margin-right: 10%;" >
                 </a>
-                <a data-open="modalSaturno" class="thumbnail">
+                <a data-open="modal6" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/The Mirror/6.jpg"
                          alt="Saturno" width="30%" height="30%">
                 </a>
-				<a data-open="modalSiliconV" class="thumbnail">
+				<a data-open="modal7" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/The Mirror/7.jpg"
                          alt="Silicon" width="30%" height="30%">
                 </a>
@@ -207,21 +286,112 @@
             </br>
             </br>
         </div>
-		<div class="reveal small" id="modalMiracle" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/The Mirror/1.jpg">
+		<div class="reveal small" id="modal1" data-reveal>
+            <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+			<span class="next" onclick="plusSlides(1)">&#10095;</span>
+	
+			<div class="slideshow-img" style="display:block">
+				<img class="lazyload" data-src="../../images/gioielli/The Mirror/1.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p>
+					<b>A Miracle</b> </br>
+					Linee di luce simmetriche e perfette, proteggono la creatura innocente che emerge dal rosso profondo.
+					</br>
+					<p class="didascalia"><p class="didascalia">spilla | 8,5 x 5,9 x 1,3 cm | stampa impressa su Dibond, alluminio, titanio e acciaio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<!--altre figure col display none-->
+			<div class="slideshow-img" style="display:none"><img class="lazyload" data-src="../../images/gioielli/The Mirror/2.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Venezia</b> </br>
+				Nella bellezza di S. Marco si perde l’anima dell’artista e quei tratti maestosi esplodono in linee tenui e mille riflessi che generano profili di donna e un siluro pronto a varcare la profondità degli abissi.
+				</br>
+				<p class="didascalia">spilla | 8,5 x 6,5 x 1,3 cm | stampa impressa su Dibond, titanio e acciaio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/The Mirror/3.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Saturno</b> </br> 
+				La sospensione di una linea nello spazio, la sua ombra riflessa oltre la luce. Traccia e sogno, di una presenza.
+				 </br> 
+				<p class="didascalia">spilla | 8,5 x 6,2 x 1,3 cm | stampa impressa su Dibond, titanio e acciaio
+				</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/The Mirror/4.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Nature is coming...</b> </br>
+				La luce che esplode parla la voce della natura che incide e intacca le opere dell’uomo e tutte le sue illusioni.
+				</br>
+				<p class="didascalia"><p class="didascalia">spilla | 8,4 x 6,3 x 1,3 cm | stampa impressa su Dibond, titanio e acciai
+				</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/The Mirror/5.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Children’s climb</b> </br> 
+				Un gioiello per raccontare la gioia: scalare e arrampicarsi il gioco dei bambini.
+				</br> 
+				<p class="didascalia"><p class="didascalia">spilla | 8,4 x 6,3 x 1,3 cm | stampa impressa su Dibond, titanio e acciaio		
+				</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/The Mirror/6.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Silicon Valley</b> </br>
+				Uno specchio della grandezza e complessità della tecnologia. Un piccolo e unico microchip nell’universo.
+				</br></p>
+				<p class="didascalia">spilla | 8 x 5,7 x 1,2 cm | stampa impressa su Dibond, alluminio, titanio e acciaio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+			<img class="lazyload" data-src="../../images/gioielli/The Mirror/7.jpg">
             <div class="show-for-small-only">
                 <button class="close-button-small" data-close aria-label="Close modal" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div>
-            <p>
-                <b>A Miracle</b> </br>
-Linee di luce simmetriche e perfette, proteggono la creatura innocente che emerge dal rosso profondo.
-</br>
-				<p class="didascalia"><p class="didascalia">spilla | 8,5 x 5,9 x 1,3 cm | stampa impressa su Dibond, alluminio, titanio e acciaio</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalNature" data-reveal>
+				</div>
+				<p><b>Chevrolet</b> </br>
+				Dal nero buio ai colori di luce incendiata, dal basso verso l’alto si staglia l’icona scheletrica di un antico marchio americano.
+				</br>
+				<p class="didascalia">spilla | 8,2 x 6 x 1,3 cm | stampa impressa su Dibond, titanio e acciaio
+				</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+		</div>
+        <div class="reveal small" id="modal4" data-reveal>
             <img class="lazyload" data-src="../../images/gioielli/The Mirror/4.jpg">
             <div class="show-for-small-only">
                 <button class="close-button-small" data-close aria-label="Close modal" type="button">
@@ -235,7 +405,7 @@ Linee di luce simmetriche e perfette, proteggono la creatura innocente che emerg
 			</p>
             <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
         </div>
-        <div class="reveal small" id="modalChildren" data-reveal>
+        <div class="reveal small" id="modal5" data-reveal>
             <img class="lazyload" data-src="../../images/gioielli/The Mirror/5.jpg">
             <div class="show-for-small-only">
                 <button class="close-button-small" data-close aria-label="Close modal" type="button">
@@ -249,7 +419,7 @@ Linee di luce simmetriche e perfette, proteggono la creatura innocente che emerg
 			</p>
             <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
         </div>
-        <div class="reveal small" id="modalChevrolet" data-reveal>
+        <div class="reveal small" id="modal7" data-reveal>
             <img class="lazyload" data-src="../../images/gioielli/The Mirror/7.jpg">
             <div class="show-for-small-only">
                 <button class="close-button-small" data-close aria-label="Close modal" type="button">
@@ -263,7 +433,7 @@ Linee di luce simmetriche e perfette, proteggono la creatura innocente che emerg
 			</p>
             <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
         </div>
-        <div class="reveal small" id="modalVenezia" data-reveal>
+        <div class="reveal small" id="modal2" data-reveal>
             <img class="lazyload" data-src="../../images/gioielli/The Mirror/2.jpg">
             <div class="show-for-small-only">
                 <button class="close-button-small" data-close aria-label="Close modal" type="button">
@@ -276,7 +446,7 @@ Linee di luce simmetriche e perfette, proteggono la creatura innocente che emerg
 			<p class="didascalia">spilla | 8,5 x 6,5 x 1,3 cm | stampa impressa su Dibond, titanio e acciaio</p>
             <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
         </div>
-        <div class="reveal small" id="modalSaturno" data-reveal>
+        <div class="reveal small" id="modal3" data-reveal>
             <img class="lazyload" data-src="../../images/gioielli/The Mirror/3.jpg">
             <div class="show-for-small-only">
                 <button class="close-button-small" data-close aria-label="Close modal" type="button">
@@ -290,7 +460,7 @@ Linee di luce simmetriche e perfette, proteggono la creatura innocente che emerg
 			</p>
             <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
         </div>
-		<div class="reveal small" id="modalSiliconV" data-reveal>
+		<div class="reveal small" id="modal6" data-reveal>
             <img class="lazyload" data-src="../../images/gioielli/The Mirror/6.jpg">
             <div class="show-for-small-only">
                 <button class="close-button-small" data-close aria-label="Close modal" type="button">
@@ -331,7 +501,10 @@ Linee di luce simmetriche e perfette, proteggono la creatura innocente che emerg
     </div>
 
 </form>
-
+<script src="../../js/vendor/jquery.js"></script>
+<script src="../../js/vendor/foundation.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../js/lazysizes.min.js" async></script>
 <script>
         $(".href-menu > ul").hide().parent().hover(function (event) {
             $(this).children("ul").slideToggle(event.type === "mouseenter");
