@@ -22,18 +22,45 @@
 	<meta name="twitter:description" content="Sito web Stefano Fronza | Gioielli d'autore" >
 	<meta name="twitter:title" content="Sito web Stefano Fronza | Gioielli d'autore" />
 	<meta name="twitter:image" content="http://www.stefanofronza.com/images/anteprima.jpg" />
-    <title>Stefano Fronza | Gioielli d'autore | Glimpses through the window</title>
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/foundation.css">
+    <link rel="stylesheet" href="../../css/style.css">
+	<title>Stefano Fronza | Gioielli d'autore | Glimpses through the window</title>
 	<script>
     var baseUrl = "/stefano/";
 	</script>
-	<script>
-    document.write('<link rel="stylesheet" href="' + baseUrl + 'css/font-awesome.min.css">');
-	document.write('<link rel="stylesheet" href="' + baseUrl + 'css/foundation.css">');
-	document.write('<link rel="stylesheet" href="' + baseUrl + 'css/style.css">');
-	document.write('<script src="' + baseUrl + 'js/vendor/jquery.js"><\/script>');
-	document.write('<script src="' + baseUrl + 'js/app.js"><\/script>');
-	document.write('<script src="' + baseUrl + 'js/lazysizes.min.js"><\/script>');
-	</script>
+	<style>
+.prev-slide, .next-slide {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+/* Position the previous button on the left side */
+.prev-slide {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the next button on the right side */
+.next-slide {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* When hovering over the buttons, change background color */
+.prev-slide:hover, .next-slide:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+</style>
+
 </head>
 <div>
     <body>
@@ -127,44 +154,44 @@
             <div class="large-1 cell">
             </div>
             <div class="large-12 cell center">
-                <a data-open="modalAnfora" class="thumbnail">
+                <a href="#" onclick="openAndShowModal('modal5')" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg"
                          alt="collana_Collegamento ipertestuale" width="30%" height="30%">
                 </a>
 				
                 </br>
-                <a data-open="modalSpillaTracce" class="thumbnail">
+                <a href="#" onclick="openAndShowModal('modal2')" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg"
                          alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="padding-bottom: 15%;">
                 </a>
 				
-                <a data-open="modalLuce" class="thumbnail">
+                <a href="#" onclick="openAndShowModal('modal3')" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016_2.jpg"
                          alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="padding-top: 20%;">
                 </a>
-				<a data-open="modalSpillaTerrestre" class="thumbnail">
+				<a href="#" onclick="openAndShowModal('modal1')" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg"
                          alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="padding-bottom: 15%;">
                 </a>
                 
                 </br>
-				 <a data-open="modalSpillaRhythm" class="thumbnail">
+				<a href="#" onclick="openAndShowModal('modal4')" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg"
                          alt="collana_Collegamento ipertestuale" width="30%" height="30%" >
                 </a>
-                <a data-open="modalSpillaSegni" class="thumbnail">
+                <a href="#" onclick="openAndShowModal('modal6')" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg"
                          alt="collana_Collegamento ipertestuale" width="30%" height="30%">
                 </a>
 				</br>
-                <a data-open="modalSpillaPerle" class="thumbnail">
+                <a href="#" onclick="openAndShowModal('modal7')" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg"
                          alt="collana_Collegamento ipertestuale" width="30%" height="30%">
                 </a>
 				<img
                 class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/vuota.jpg"
                 alt="" width="30%" height="30%">
-                <a data-open="modalAnelloEclisse" class="thumbnail">
+                <a href="#" onclick="openAndShowModal('modal8')" class="thumbnail">
                     <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg"
                          alt="Anello Eclisse" width="30%" height="30%">
                 </a>
@@ -210,98 +237,712 @@
             </br>
             </br>
         </div>
-		<div class="reveal small" id="modalSpillaVenezia" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia_ Stefano Fronza_2021.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Canali a Venezia</b> </br> spilla | 8,3x5x1,3 cm | stampa su Dibond, alluminio, titanio
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalSpillaTerrestre" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Terrestre</b> </br> spilla | 9,2x5,2x1,2 cm | stampa Lambda su alluminio, titanio, oro puro</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalSpillaTracce" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Tracce</b> </br> spilla | 9,6x8,9x1,5 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalLuce" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Luce</b> </br> spilla | 8,4x8,4x1,4 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalSpillaRhythm" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Rhythm</b> </br> spilla | 13x4,5x1,4 cm | stampa su alluminio, Pvc, alluminio, oro puro, titanio</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalAnfora" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Anfora a Venezia</b> </br> spilla | 10,2x7,4x1,3 cm | stampa su Dibond, alluminio, oro puro, titanio</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalSpillaSegni" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Segni a Venezia</b> </br> spilla | 9,9x6,4x1,1 cm | stampa su Dibond, alluminio, oro puro</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalSpillaPerle" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Perla di saggezza</b> </br> spilla | 8,7x9,1x1,3cm | stampa su Dibond, alluminio, oro puro, crisoprasio, titanio</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalAnelloEclisse" data-reveal>
-            <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Eclisse</b> </br> anello | 5,3x2,7x2,1 cm | stampa su Dibond, alluminio e oro puro</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
+		<!-------------------INIZIO SLIDESHOW IMMAGINE 5 ------------------------------------>
+		<div class="reveal small" id="modal5" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal5')">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal5')">&#10095;</span>
+            
+			<div class="slideshow-img" style="display:block">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Anfora a Venezia</b> </br> spilla | 10,2x7,4x1,3 cm | stampa su Dibond, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Tracce</b> </br> spilla | 9,6x8,9x1,5 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Terrestre</b> </br> spilla | 9,2x5,2x1,2 cm | stampa Lambda su alluminio, titanio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Luce</b> </br> spilla | 8,4x8,4x1,4 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Rhythm</b> </br> spilla | 13x4,5x1,4 cm | stampa su alluminio, Pvc, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Segni a Venezia</b> </br> spilla | 9,9x6,4x1,1 cm | stampa su Dibond, alluminio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Perla di saggezza</b> </br> spilla | 8,7x9,1x1,3cm | stampa su Dibond, alluminio, oro puro, crisoprasio, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Eclisse</b> </br> anello | 5,3x2,7x2,1 cm | stampa su Dibond, alluminio e oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+		</div>
+		
+		<!-------------------INIZIO SLIDESHOW IMMAGINE 2 ------------------------------------>
+		<div class="reveal small" id="modal2" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal2')">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal2')">&#10095;</span>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Tracce</b> </br> spilla | 9,6x8,9x1,5 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Terrestre</b> </br> spilla | 9,2x5,2x1,2 cm | stampa Lambda su alluminio, titanio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Luce</b> </br> spilla | 8,4x8,4x1,4 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Rhythm</b> </br> spilla | 13x4,5x1,4 cm | stampa su alluminio, Pvc, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Segni a Venezia</b> </br> spilla | 9,9x6,4x1,1 cm | stampa su Dibond, alluminio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Perla di saggezza</b> </br> spilla | 8,7x9,1x1,3cm | stampa su Dibond, alluminio, oro puro, crisoprasio, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Eclisse</b> </br> anello | 5,3x2,7x2,1 cm | stampa su Dibond, alluminio e oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:block">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Anfora a Venezia</b> </br> spilla | 10,2x7,4x1,3 cm | stampa su Dibond, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+		</div>
+		
+		<!-------------------INIZIO SLIDESHOW IMMAGINE 3 ------------------------------------>
+		<div class="reveal small" id="modal3" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal3')">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal3')">&#10095;</span>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Luce</b> </br> spilla | 8,4x8,4x1,4 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Rhythm</b> </br> spilla | 13x4,5x1,4 cm | stampa su alluminio, Pvc, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Segni a Venezia</b> </br> spilla | 9,9x6,4x1,1 cm | stampa su Dibond, alluminio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Perla di saggezza</b> </br> spilla | 8,7x9,1x1,3cm | stampa su Dibond, alluminio, oro puro, crisoprasio, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Eclisse</b> </br> anello | 5,3x2,7x2,1 cm | stampa su Dibond, alluminio e oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:block">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Anfora a Venezia</b> </br> spilla | 10,2x7,4x1,3 cm | stampa su Dibond, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Tracce</b> </br> spilla | 9,6x8,9x1,5 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Terrestre</b> </br> spilla | 9,2x5,2x1,2 cm | stampa Lambda su alluminio, titanio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+		</div>
+		
+		<!-------------------INIZIO SLIDESHOW IMMAGINE 1 ------------------------------------>
+		<div class="reveal small" id="modal1" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal1')">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal1')">&#10095;</span>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Terrestre</b> </br> spilla | 9,2x5,2x1,2 cm | stampa Lambda su alluminio, titanio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Rhythm</b> </br> spilla | 13x4,5x1,4 cm | stampa su alluminio, Pvc, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Segni a Venezia</b> </br> spilla | 9,9x6,4x1,1 cm | stampa su Dibond, alluminio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Perla di saggezza</b> </br> spilla | 8,7x9,1x1,3cm | stampa su Dibond, alluminio, oro puro, crisoprasio, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Eclisse</b> </br> anello | 5,3x2,7x2,1 cm | stampa su Dibond, alluminio e oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:block">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Anfora a Venezia</b> </br> spilla | 10,2x7,4x1,3 cm | stampa su Dibond, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Tracce</b> </br> spilla | 9,6x8,9x1,5 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Luce</b> </br> spilla | 8,4x8,4x1,4 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+		</div>
+		
+		<!-------------------INIZIO SLIDESHOW IMMAGINE 4 ------------------------------------>
+		<div class="reveal small" id="modal4" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal4')">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal4')">&#10095;</span>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Rhythm</b> </br> spilla | 13x4,5x1,4 cm | stampa su alluminio, Pvc, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Segni a Venezia</b> </br> spilla | 9,9x6,4x1,1 cm | stampa su Dibond, alluminio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Perla di saggezza</b> </br> spilla | 8,7x9,1x1,3cm | stampa su Dibond, alluminio, oro puro, crisoprasio, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Eclisse</b> </br> anello | 5,3x2,7x2,1 cm | stampa su Dibond, alluminio e oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:block">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Anfora a Venezia</b> </br> spilla | 10,2x7,4x1,3 cm | stampa su Dibond, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Tracce</b> </br> spilla | 9,6x8,9x1,5 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Terrestre</b> </br> spilla | 9,2x5,2x1,2 cm | stampa Lambda su alluminio, titanio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Luce</b> </br> spilla | 8,4x8,4x1,4 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+		</div>
+		
+		<!-------------------INIZIO SLIDESHOW IMMAGINE 6 ------------------------------------>
+		<div class="reveal small" id="modal6" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal6')">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal6')">&#10095;</span>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Segni a Venezia</b> </br> spilla | 9,9x6,4x1,1 cm | stampa su Dibond, alluminio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Perla di saggezza</b> </br> spilla | 8,7x9,1x1,3cm | stampa su Dibond, alluminio, oro puro, crisoprasio, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Eclisse</b> </br> anello | 5,3x2,7x2,1 cm | stampa su Dibond, alluminio e oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:block">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Anfora a Venezia</b> </br> spilla | 10,2x7,4x1,3 cm | stampa su Dibond, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Tracce</b> </br> spilla | 9,6x8,9x1,5 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Terrestre</b> </br> spilla | 9,2x5,2x1,2 cm | stampa Lambda su alluminio, titanio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Luce</b> </br> spilla | 8,4x8,4x1,4 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Rhythm</b> </br> spilla | 13x4,5x1,4 cm | stampa su alluminio, Pvc, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+		</div>
+		
+		<!-------------------INIZIO SLIDESHOW IMMAGINE 7 ------------------------------------>
+		<div class="reveal small" id="modal7" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal7')">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal7')">&#10095;</span>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Perla di saggezza</b> </br> spilla | 8,7x9,1x1,3cm | stampa su Dibond, alluminio, oro puro, crisoprasio, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Eclisse</b> </br> anello | 5,3x2,7x2,1 cm | stampa su Dibond, alluminio e oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:block">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Anfora a Venezia</b> </br> spilla | 10,2x7,4x1,3 cm | stampa su Dibond, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Tracce</b> </br> spilla | 9,6x8,9x1,5 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Terrestre</b> </br> spilla | 9,2x5,2x1,2 cm | stampa Lambda su alluminio, titanio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Luce</b> </br> spilla | 8,4x8,4x1,4 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Rhythm</b> </br> spilla | 13x4,5x1,4 cm | stampa su alluminio, Pvc, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Segni a Venezia</b> </br> spilla | 9,9x6,4x1,1 cm | stampa su Dibond, alluminio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+		</div>
+		
+		
+		<!-------------------INIZIO SLIDESHOW IMMAGINE 8 ------------------------------------>
+		<div class="reveal small" id="modal8" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal8')">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal8')">&#10095;</span>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Eclisse</b> </br> anello | 5,3x2,7x2,1 cm | stampa su Dibond, alluminio e oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:block">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Anfora a Venezia</b> </br> spilla | 10,2x7,4x1,3 cm | stampa su Dibond, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Tracce</b> </br> spilla | 9,6x8,9x1,5 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Terrestre</b> </br> spilla | 9,2x5,2x1,2 cm | stampa Lambda su alluminio, titanio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Luce</b> </br> spilla | 8,4x8,4x1,4 cm | stampa Lambda su alluminio, Pvc, titanio, oro puro </p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Rhythm</b> </br> spilla | 13x4,5x1,4 cm | stampa su alluminio, Pvc, alluminio, oro puro, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Segni a Venezia</b> </br> spilla | 9,9x6,4x1,1 cm | stampa su Dibond, alluminio, oro puro</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+			<div class="slideshow-img" style="display:none">
+				<img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
+				<div class="show-for-small-only">
+					<button class="close-button-small" data-close aria-label="Close modal" type="button">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<p><b>Perla di saggezza</b> </br> spilla | 8,7x9,1x1,3cm | stampa su Dibond, alluminio, oro puro, crisoprasio, titanio</p>
+				<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
+			</div>
+		</div>
+		
+		
         </br>
         <hr />
 <footer>
@@ -348,38 +989,7 @@
         }
        
     </script>
-	
-	<script> 
-var slideIndex = 1;
-showSlides(slideIndex);
 
-// Open the modal
-function openModal() {
-  document.getElementById('modal').style.display = "block";
-}
-
-// Close the modal
-function closeModal() {
-  document.getElementById('modal').style.display = "none";
-}
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Display the slides
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slideshow-img");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-}
-</script>
 </body>
 </div>
 </html>
