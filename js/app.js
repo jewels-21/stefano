@@ -15,49 +15,59 @@ $('#return-to-top').click(function () {      // When arrow is clicked
 });
 
 
-    // Define slideIndex globally
-    var slideIndex = {};
+// Define slideIndex globally
+var slideIndex = {};
 
-    // Function to open the modal and start the slideshow for a given modal ID
-    function openAndShowModal(modalId) {
-        // Open the modal
-        $('#' + modalId).foundation('open');
+// Define image order for each modal
 
-        // Start slideshow for the given modal ID
-        showSlides(1, modalId);
 
-        // Bind a listener to the modal close event
-        $('#' + modalId).on('closed.zf.reveal', function() {
-            // Reset slideIndex for the modal
-            slideIndex[modalId] = 1;
-        });
-    }
+// Define slideIndex globally
+var slideIndex = {};
 
-    // Function to close the modal and reset slideIndex for the modal
-    function closeModalAndReset(modalId) {
-        // Close the modal
-        $('#' + modalId).foundation('close');
+// Function to open the modal and start the slideshow for a given modal ID
+function openAndShowModal(modalId, modalData) {
+    // Open the modal
+    $('#' + modalId).foundation('open');
 
-        // Reset slideIndex for the modal
+    // Start slideshow for the given modal ID
+    slideIndex[modalId] = 1;
+    showSlides(slideIndex[modalId], modalId, modalData);
+}
+
+// Next/previous controls for slideshow
+function plusSlides(n, modalId, modalData) {
+    showSlides(slideIndex[modalId] += n, modalId, modalData);
+}
+
+// Display the slides for a given modal ID
+function showSlides(n, modalId, modalData) {
+    var i;
+    var slides = document.getElementById(modalId + "-slides");
+    if (!slideIndex[modalId]) {
         slideIndex[modalId] = 1;
     }
+    if (n > modalData[modalId].length) { slideIndex[modalId] = 1; }
+    if (n < 1) { slideIndex[modalId] = modalData[modalId].length; }
+    slides.innerHTML = ""; // Clear existing slides
+    var currentData = modalData[modalId][slideIndex[modalId] - 1];
+    var img = document.createElement("img");
+    img.setAttribute("class", "lazyload");
+    img.setAttribute("data-src", currentData.src);
+    slides.appendChild(img);
 
-    // Next/previous controls for slideshow
-    function plusSlides(n, modalId) {
-        showSlides(slideIndex[modalId] += n, modalId);
-    }
+    // Add description
+    var description = document.createElement("p");
+    description.innerHTML = currentData.description;
+    slides.appendChild(description);
 
-    // Display the slides for a given modal ID
-    function showSlides(n, modalId) {
-        var i;
-        var slides = document.querySelectorAll('#' + modalId + ' .slideshow-img');
-        if (!slideIndex[modalId]) {
-            slideIndex[modalId] = 1;
-        }
-        if (n > slides.length) { slideIndex[modalId] = 1; }
-        if (n < 1) { slideIndex[modalId] = slides.length; }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex[modalId] - 1].style.display = "block";
-    }
+    // Add more info link if moreInfo exists
+    if (currentData.moreInfo) {
+		var moreInfoLink = document.createElement("p");
+		moreInfoLink.innerHTML = '<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">' + currentData.moreInfo + '</a></small></p>';
+		slides.appendChild(moreInfoLink.firstChild);
+	}
+
+}
+
+
+
