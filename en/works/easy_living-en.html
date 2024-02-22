@@ -28,6 +28,37 @@
 	<meta name="twitter:title" content="Sito web Stefano Fronza | Gioielli d'autore" />
 	<meta name="twitter:image" content="http://www.stefanofronza.com/images/anteprima.jpg" />
     <title>Stefano Fronza | Gioielli d'autore | Easy living</title>
+<style>
+.prev-slide, .next-slide {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+/* Position the previous button on the left side */
+.prev-slide {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the next button on the right side */
+.next-slide {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* When hovering over the buttons, change background color */
+.prev-slide:hover, .next-slide:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+</style>
 </head>
 <div>
     <body>
@@ -82,12 +113,12 @@
 					<a href="#" class="current">jewels</a>
 					<ul class="vertical menu" style="font-size:17px;">
 						<li><a href="concept-en.html">concept</a></li>
-						<li><a href="#">works</a>
+						<li><a href="#" class="current">works</a>
 							<ul class="vertical menu" style="min-width:330px !important;font-size:17px;">
-								<li><a href="in_blue-en.html">In Blue</a></li>
-								<li><a href="easy_living-en.html" class="current">Easy living</a></li>
-								<li><a href="glimpses-en.html">Glimpses through the window</a></li>
-								<li><a href="between_music-en.html">Between Music and Rebirth</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/works/the_mirror-en.html'">the mirror</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/works/easy_living-en.html'" class="current">easy living</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/works/glimpses-en.html'">glimpses through the window</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/works/between_music-en.html'">between music and rebirth</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -95,10 +126,10 @@
 				<li style="margin-right: 40px;">
 					<a href="#">news</a>
 					<ul class="vertical menu" style="font-size:17px;">
-						<li><a href="news_2022-en.html">2022</a></li>
-						<li><a href="news_2021-en.html">2021</a></li>
-						<li><a href="news_2020-en.html">2020</a></li>
-						<li><a href="news_archive.html">archive</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_2023-en.html'">2023</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_2022-en.html'">2022</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_2021-en.html'">2021</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_archive.html'">archive</a></li>
 					</ul>
 				</li>
 				<li><a href="contacts.html">contacts</a></li>
@@ -121,65 +152,82 @@
             <div class="large-1 cell">
             </div>
             <div class="large-12 cell center">
-                <a data-open="modalFigura" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-right: 8%;">
+			    <a href="#" onclick="openAndShowModal('modal1',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg"
+                         alt="Vision" width="30%" height="30%" style="margin-right: 8%;" >
                 </a>
-                <a data-open="modalbroochReproduction" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg"
+                <a href="#" onclick="openAndShowModal('modal2',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg"
                          alt="collana_Collegamento ipertestuale" width="30%" height="30%">
                 </a>
 				</br>
-				<a data-open="modalbroochWave" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-top: 7%;">
+                <a href="#" onclick="openAndShowModal('modal3',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg"
+                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-top: 18%;">
                 </a>
-				<a data-open="modalbroochResource" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/12_spilla_Risorsa_2021_2.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-bottom: 10%;">
+				<a href="#" onclick="openAndShowModal('modal4',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/12_spilla_Risorsa_2021_2.jpg"
+                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-bottom: 15%;">
+                </a>				
+				<a href="#" onclick="openAndShowModal('modal5',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg"
+                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-top: 18%;">
                 </a>
-                <a data-open="modalbroochSigns" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-top: 7%;">
+				
+				</br>
+				
+				<a href="#" onclick="openAndShowModal('modal7',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg"
+                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
+                </a>
+				<a href="#" onclick="openAndShowModal('modal11',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg"
+                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
+                </a>
+				</br>
+               
+				
+				<a href="#" onclick="openAndShowModal('modal6',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg"
+                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" >
+                </a>
+				</br>
+				<a href="#" onclick="openAndShowModal('modal9',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/13_Origine nel vento.jpg"
+                         alt="spilla Origine nel Vento" width="30%" height="30%">
+                </a>
+				<img
+                class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/vuota.jpg"
+                alt="" width="30%" height="30%">
+				<a href="#" onclick="openAndShowModal('modal14',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg"
+                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
+                </a>
+				</br>
+				<a href="#" onclick="openAndShowModal('modal10',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg"
+                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
+                </a>
+				<a href="#" onclick="openAndShowModal('modal13',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/11b_Scie di luce.jpg"
+                         alt="spilla Scie di luce" width="30%" height="30%">
+                </a>
+				</br>
+				<a href="#" onclick="openAndShowModal('modal8',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg"
+                         alt="Piece of a Dream" width="30%" height="30%">
+                </a>
+				<img
+                class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/vuota.jpg"
+                alt="" width="30%" height="30%">
+				
+				<a href="#" onclick="openAndShowModal('modal15',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg"
+                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
                 </a>
                
-                <a data-open="modalOrecchinoHorizons" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/7_orecchino singolo_Orizzonti_2017.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-top: 15%;">
-                </a>
-               <a data-open="modalbroochRebirth" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/8_spilla_Rinascita_2017_2.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-bottom: 10%;">
-                </a>
-				 <a data-open="modalOrecchinoOmbra" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/6_orecchino singolo_Linea d_ombra_2017.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-top: 15%;">
-                </a>				
-				 <a data-open="modalOrecchiniOrigineNelVento" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/13_Origine nel vento_2.jpg"
-                         alt="spilla Origine nel Vento" width="30%" height="30%" style="margin-top: 10%;">
-                </a>
-			    <a data-open="modalbroochFish" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/4_spilla_Pesce_2016_2.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-bottom: 15%;">
-                </a>
-				 <a data-open="modalearringsGermogli" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-top: 15%;">
-                </a>				
-                <a data-open="modalbroochMonument" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-top: 10%;">
-                </a>               
-				  <a data-open="modalSpillaScieLuce" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/11b_Scie di luce_2.jpg"
-                         alt="spilla Scie di luce" width="30%" height="30%" style="margin-bottom: 10%;">
-                </a>               
-                <a data-open="modalearringsCouple" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="margin-top: 10%;">
-                </a>
-            </div>
+				
+			</div>
         </div>
         <div class="rightFoto">
             <small>Jewelry photos by <a href="https://www.fotonadiabaldo.it/" class="href-menu" target="_blank">Nadia Baldo</a></small>
@@ -222,146 +270,91 @@
             </br>
             </br>
         </div>
-        <div class="reveal small" id="modalFigura" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochReproduction" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochSigns" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochFish" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochMonument" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalOrecchinoOmbra" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/6_orecchino singolo_Linea d_ombra_2017.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalOrecchinoHorizons" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/7_orecchino singolo_Orizzonti_2017.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Horizons</b> </br> single earring | 4x3,9x0,8 cm | Lambda print on aluminium, Pvc, aluminium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochRebirth" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochWave" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalearringsCouple" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalearringsGermogli" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochResource" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalOrecchiniOrigineNelVento" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/13_Origine nel vento.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalSpillaScieLuce" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Easy Living/11b_Scie di luce.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Light trails</b> </br> brooch | 11,5x4,2x1,3 cm | print on Dibond, aluminium, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
+        <div class="reveal small" id="modal1" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal1',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal1',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal1-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal2" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal2',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal2',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal2-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal3" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal3',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal3',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal3-slides"></div>			
+		</div>			
+		<div class="reveal small" id="modal4" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal4',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal4',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal4-slides"></div>
+		</div>	
+			<div class="reveal small" id="modal5" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal5',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal5',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal5-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal6" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal6',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal6',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal6-slides"></div>			
+		</div>			
+		<div class="reveal small" id="modal7" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal7',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal7',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal7-slides"></div>
+		</div>
+		<div class="reveal small" id="modal8" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal8',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal8',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal8-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal9" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal9',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal9',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal9-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal10" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal10',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal10',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal10-slides"></div>			
+		</div>			
+		<div class="reveal small" id="modal11" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal11',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal11',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal11-slides"></div>
+		</div>	
+			<div class="reveal small" id="modal12" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal12',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal12',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal12-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal13" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal13',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal13',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal13-slides"></div>			
+		</div>			
+		<div class="reveal small" id="modal14" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal14',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal14',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal14-slides"></div>
+		</div>
+		<div class="reveal small" id="modal15" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal15',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal15',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal15-slides"></div>
+		</div>
         </br>
         <hr />
 <footer>
@@ -385,21 +378,251 @@
         </div>
 </div>
 </form>
-<script src="../js/vendor/jquery.js"></script>
-<script src="../js/vendor/foundation.js"></script>
-<script src="../js/app.js"></script>
-<script src="../js/lazysizes.min.js" async></script>
+<script src="../../js/vendor/jquery.js"></script>
+<script src="../../js/vendor/foundation.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../js/lazysizes.min.js" async></script>
 <script type="text/javascript">
     function parseJSAtOnload() {
         var element = document.createElement("script");
-        element.src = "../js/vendor/foundation.js";
+        element.src = "../../js/vendor/foundation.js";
         document.body.appendChild(element);
-        element.src = "../js/vendor/jquery.js";
+        element.src = "../../js/vendor/jquery.js";
         document.body.appendChild(element);
-        element.src = "../js/app.js";
+        element.src = "../../js/app.js";
         document.body.appendChild(element);
     }
 </script>
+
+<script>	
+	var modalData = {
+    "modal1": [
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"}
+		],
+    "modal2": [
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"}, 
+], 
+	"modal4": [
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"}
+		], 
+    "modal3": [
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"}
+],
+	"modal5": [
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"}
+		],
+    "modal7": [
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"}
+	],
+    "modal11": [
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"}
+	],
+	"modal6": [
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"}
+	],
+	"modal9": [
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"}
+	],
+	"modal14": [
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"}
+	],
+	"modal10": [
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"}
+	],
+	"modal13": [
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"}
+	],
+	"modal8": [
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}, 
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"}	
+	],
+	"modal15": [
+		{src:  "../../images/gioielli/Easy Living/5_Spilla_Monument_2017.jpg", description: "<b>Monument</b> </br> brooch | 10,2x8,2x1,4 cm | Lambda print on aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/In Blue/5_Vision_spilla_2021.jpg", description: "<b>Vision</b> </br> brooch | 13,5x10x1,4 cm | print on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/1_Figura Femminile_2016.jpg", description: "<b>Female figure</b> </br> brooch | 13x7x1,7 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/12_spilla_Risorsa_2021.jpg", description: "<b>Resource</b> </br> brooch | 8,6x9x1,4 cm | printed on Dibond, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/2_spilla_Riproduzione_2016.jpg", description: "<b>Reproduction</b> </br> brooch | 13x6,4x1,9 cm print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/9_spilla_Onda_2018.jpg", description: "<b>Wave</b> </br> brooch | 12,8x7,2x1,3 cm | stampa su aluminium, Pvc, aluminium, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/3_spilla_Segnali_2016.jpg", description: "<b>Signs</b> </br> brooch | 12,2x8x1,5 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11_orecchini_Germogli marini_2020.jpg", description: "<b>Sea flowers</b> </br> earrings | 8x3x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/8_spilla_Rinascita_2017.jpg", description: "<b>Rebirth</b> </br> brooch | 13,6x8,4x1,3 cm | print on aluminium, PVC, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/13_Origine nel vento.jpg", description: "<b>Source in the wind</b> </br>earrings  | 5,8x3,6x0,6 cm | print on Dibond, aluminium and silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/10_Orecchini_Coppia_2020.jpg", description: "<b>Couple</b> </br> earrings | 4,7x1,9x0,6 cm | print on Dibond, aluminium, silver 925", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/4_spilla_Pesce_2016.jpg", description: "<b>Fish</b> </br> brooch | 9,5x9x1,4 cm | Lambda print on aluminium, Pvc, titanium", moreInfo: "More details?"},
+		{src:  "../../images/gioielli/Easy Living/11b_Scie di luce.jpg", description: "<b>Shadow line</b> </br> single earring | 7,7x2,5x0,8 cm | Lambda print on aluminium, Pvc, aluminium", moreInfo: "More details?"},	
+		{src:  "../../images/gioielli/In Blue/6_Piece of a Dream_spilla_2022.jpg", description: "<b>Piece of a Dream</b> </br> brooch | 9,8x8,4x1,25 cm | print on Dibond, titanium", moreInfo: "More details?"}
+	]
+};
+ </script>
+ 
 </body>
 </div>
 </html>

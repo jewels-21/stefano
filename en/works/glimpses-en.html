@@ -28,6 +28,37 @@
 	<meta name="twitter:title" content="Sito web Stefano Fronza | Gioielli d'autore" />
 	<meta name="twitter:image" content="http://www.stefanofronza.com/images/anteprima.jpg" />
     <title>Stefano Fronza | Gioielli d'autore | Glimpses through the window</title>
+<style>
+.prev-slide, .next-slide {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+/* Position the previous button on the left side */
+.prev-slide {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the next button on the right side */
+.next-slide {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* When hovering over the buttons, change background color */
+.prev-slide:hover, .next-slide:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+</style>
 </head>
 <div>
     <body>
@@ -82,12 +113,12 @@
 					<a href="#" class="current">jewels</a>
 					<ul class="vertical menu" style="font-size:17px;">
 						<li><a href="concept-en.html">concept</a></li>
-						<li><a href="#">works</a>
+						<li><a href="#" class="current">works</a>
 							<ul class="vertical menu" style="min-width:330px !important;font-size:17px;">
-								<li><a href="in_blue-en.html">In Blue</a></li>
-								<li><a href="easy_living-en.html" >Easy living</a></li>
-								<li><a href="glimpses-en.html"class="current">Glimpses through the window</a></li>
-								<li><a href="between_music-en.html">Between Music and Rebirth</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/works/the_mirror-en.html'">the mirror</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/works/easy_living-en.html'">easy living</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/works/glimpses-en.html'" class="current">glimpses through the window</a></li>
+								<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/works/between_music-en.html'">between music and rebirth</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -95,10 +126,10 @@
 				<li style="margin-right: 40px;">
 					<a href="#">news</a>
 					<ul class="vertical menu" style="font-size:17px;">
-						<li><a href="news_2022-en.html">2022</a></li>
-						<li><a href="news_2021-en.html">2021</a></li>
-						<li><a href="news_2020-en.html">2020</a></li>
-						<li><a href="news_archive.html">archive</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_2023-en.html'">2023</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_2022-en.html'">2022</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_2021-en.html'">2021</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_archive.html'">archive</a></li>
 					</ul>
 				</li>
 				<li><a href="contacts.html">contacts</a></li>
@@ -120,47 +151,47 @@
             <div class="large-1 cell">
             </div>
             <div class="large-12 cell center">
-                <a data-open="modalAnfora" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
+				<a href="#" onclick="openAndShowModal('modal1',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg"
+                         alt="Anfora" width="30%" height="30%">
+                </a>			
+                </br>
+                <a href="#" onclick="openAndShowModal('modal2',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg"
+                         alt="Tracce" width="30%" height="30%" style="padding-bottom: 15%;">
+                </a>
+                <a href="#" onclick="openAndShowModal('modal3',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016_2.jpg"
+                         alt="Luce" width="30%" height="30%" style="padding-top: 20%;">
                 </a>
 				
+				<a href="#" onclick="openAndShowModal('modal4',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg"
+                         alt="Terrestre" width="30%" height="30%" style="padding-bottom: 15%;">
+                </a>
                 </br>
-                <a data-open="modalbroochTracks" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="padding-bottom: 15%;">
+				<a href="#" onclick="openAndShowModal('modal5',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg"
+                         alt="Rythm" width="30%" height="30%" >
                 </a>
-				
-                <a data-open="modalLight" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016_2.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="padding-top: 20%;">
-                </a>
-				<a data-open="modalbroochEarthy" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="padding-bottom: 15%;">
-                </a>
-                
-                </br>
-				 <a data-open="modalbroochRhythm" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" >
-                </a>
-                <a data-open="modalbroochSegni" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
+                <a href="#" onclick="openAndShowModal('modal6',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg"
+                         alt="Segni" width="30%" height="30%">
                 </a>
 				</br>
-                <a data-open="modalbroochPerle" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
+				<a href="#" onclick="openAndShowModal('modal7',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg"
+                         alt="Perla" width="30%" height="30%">
                 </a>
 				<img
-                class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/vuota.jpg"
-                alt="" width="30%" height="30%">
-                <a data-open="modalAnelloEclisse" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg"
+				 class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/vuota.jpg"
+				 alt="" width="30%" height="30%">
+				<a href="#" onclick="openAndShowModal('modal8',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg"
                          alt="Anello Eclisse" width="30%" height="30%">
                 </a>
+				</br>
+			
             </div>
         </div>
         <div class="rightFoto">
@@ -205,87 +236,51 @@
             </br>
             </br>
         </div>
-        <div class="reveal small" id="modalbroochEarthy" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Earthy</b> </br> brooch | 9,2x5,2x1,2 cm | Lambda print on aluminium, titanium, pure gold</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochTracks" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Tracks</b> </br> brooch | 9,6x8,9x1,5 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalLight" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Light</b> </br> brooch | 8,4x8,4x1,4 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochRhythm" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Rhythm</b> </br> brooch | 13x4,5x1,4 cm | print on aluminium, PVC, aluminium, pure gold, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalAnfora" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Venetian amphora</b> </br> brooch | 10,2x7,4x1,3 cm | printed on Dibond, aluminium, pure gold, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-		
-        <div class="reveal small" id="modalbroochSegni" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Venetian signs</b> </br> brooch | 9,9x6,4x1,1 cm | printed on Dibond, aluminium, pure gold</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochPerle" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Pearl of wisdom</b> </br> brooch | 8,7x9,1x1,3cm | printed on Dibond, aluminium, pure gold, chrysoprase, titanium</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalAnelloEclisse" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p><b>Eclipse</b> </br> ring | 5,3x2,7x2,1 cm | print on Dibond, aluminium and pure gold</p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">Vuoi saperne di più?</a></small></p>
-        </div>
+        <div class="reveal small" id="modal1" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal1',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal1',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal1-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal2" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal2',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal2',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal2-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal3" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal3',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal3',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal3-slides"></div>			
+		</div>			
+		<div class="reveal small" id="modal4" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal4',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal4',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal4-slides"></div>
+		</div>	
+			<div class="reveal small" id="modal5" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal5',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal5',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal5-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal6" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal6',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal6',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal6-slides"></div>			
+		</div>			
+		<div class="reveal small" id="modal7" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal7',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal7',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal7-slides"></div>
+		</div>	
+		<div class="reveal small" id="modal8" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal8',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal8',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal8-slides"></div>
+		</div>
         </br>
         <hr />
 <footer>
@@ -309,10 +304,10 @@
         </div>
 </div>
 </form>
-<script src="../js/vendor/jquery.js"></script>
-<script src="../js/vendor/foundation.js"></script>
-<script src="../js/app.js"></script>
-<script src="../js/lazysizes.min.js" async></script>
+<script src="../../js/vendor/jquery.js"></script>
+<script src="../../js/vendor/foundation.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../js/lazysizes.min.js" async></script>
 <script type="text/javascript">
     function parseJSAtOnload() {
         var element = document.createElement("script");
@@ -323,6 +318,89 @@
         element.src = "../js/app.js";
         document.body.appendChild(element);
     }
+</script>
+<script>	
+	var modalData = {
+    "modal1": [
+		{src:"../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg",description:"<b>Venetian amphora</b> </br> brooch | 10,2x7,4x1,3 cm | printed on Dibond, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg", description:"<b>Tracks</b> </br> brooch | 9,6x8,9x1,5 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg",description:"<b>Earthy</b> </br> brooch | 9,2x5,2x1,2 cm | Lambda print on aluminium, titanium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg", description:"<b>Light</b> </br> brooch | 8,4x8,4x1,4 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg", description:"<b>Rhythm</b> </br> brooch | 13x4,5x1,4 cm | print on aluminium, PVC, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg", description:"<b>Venetian signs</b> </br> brooch | 9,9x6,4x1,1 cm | printed on Dibond, aluminium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg", description:"<b>Pearl of wisdom</b> </br> brooch | 8,7x9,1x1,3cm | printed on Dibond, aluminium, pure gold, chrysoprase, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg",description:"<b>Eclipse</b> </br> ring | 5,3x2,7x2,1 cm | print on Dibond, aluminium and pure gold<</p>", moreInfo: "More details?"}
+	],
+    "modal2": [
+		{src:"../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg", description:"<b>Tracks</b> </br> brooch | 9,6x8,9x1,5 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg", description:"<b>Earthy</b> </br> brooch | 9,2x5,2x1,2 cm | Lambda print on aluminium, titanium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg", description:"<b>Light</b> </br> brooch | 8,4x8,4x1,4 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg",description:"<b>Rhythm</b> </br> brooch | 13x4,5x1,4 cm | print on aluminium, PVC, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg", description:"<b>Venetian signs</b> </br> brooch | 9,9x6,4x1,1 cm | printed on Dibond, aluminium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg", description:"<b>Pearl of wisdom</b> </br> brooch | 8,7x9,1x1,3cm | printed on Dibond, aluminium, pure gold, chrysoprase, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg", description:"<b>Eclipse</b> </br> ring | 5,3x2,7x2,1 cm | print on Dibond, aluminium and pure gold<</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg",description:"<b>Venetian amphora</b> </br> brooch | 10,2x7,4x1,3 cm | printed on Dibond, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}
+	],
+	"modal3": [
+		{src:"../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg", description:"<b>Light</b> </br> brooch | 8,4x8,4x1,4 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg", description:"<b>Earthy</b> </br> brooch | 9,2x5,2x1,2 cm | Lambda print on aluminium, titanium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg",description:"<b>Rhythm</b> </br> brooch | 13x4,5x1,4 cm | print on aluminium, PVC, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg", description:"<b>Venetian signs</b> </br> brooch | 9,9x6,4x1,1 cm | printed on Dibond, aluminium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg", description:"<b>Pearl of wisdom</b> </br> brooch | 8,7x9,1x1,3cm | printed on Dibond, aluminium, pure gold, chrysoprase, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg", description:"<b>Eclipse</b> </br> ring | 5,3x2,7x2,1 cm | print on Dibond, aluminium and pure gold<</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg",description:"<b>Venetian amphora</b> </br> brooch | 10,2x7,4x1,3 cm | printed on Dibond, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg", description:"<b>Tracks</b> </br> brooch | 9,6x8,9x1,5 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"} 
+	],
+    "modal4": [
+		{src:"../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg", description:"<b>Earthy</b> </br> brooch | 9,2x5,2x1,2 cm | Lambda print on aluminium, titanium, pure gold</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg", description:"<b>Light</b> </br> brooch | 8,4x8,4x1,4 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg",description:"<b>Rhythm</b> </br> brooch | 13x4,5x1,4 cm | print on aluminium, PVC, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg", description:"<b>Venetian signs</b> </br> brooch | 9,9x6,4x1,1 cm | printed on Dibond, aluminium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg", description:"<b>Pearl of wisdom</b> </br> brooch | 8,7x9,1x1,3cm | printed on Dibond, aluminium, pure gold, chrysoprase, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg", description:"<b>Eclipse</b> </br> ring | 5,3x2,7x2,1 cm | print on Dibond, aluminium and pure gold<</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg",description:"<b>Venetian amphora</b> </br> brooch | 10,2x7,4x1,3 cm | printed on Dibond, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg", description:"<b>Tracks</b> </br> brooch | 9,6x8,9x1,5 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}		],
+	"modal5": [
+		{src:"../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg",description:"<b>Rhythm</b> </br> brooch | 13x4,5x1,4 cm | print on aluminium, PVC, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg", description:"<b>Venetian signs</b> </br> brooch | 9,9x6,4x1,1 cm | printed on Dibond, aluminium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg", description:"<b>Pearl of wisdom</b> </br> brooch | 8,7x9,1x1,3cm | printed on Dibond, aluminium, pure gold, chrysoprase, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg", description:"<b>Eclipse</b> </br> ring | 5,3x2,7x2,1 cm | print on Dibond, aluminium and pure gold<</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg",description:"<b>Venetian amphora</b> </br> brooch | 10,2x7,4x1,3 cm | printed on Dibond, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg", description:"<b>Tracks</b> </br> brooch | 9,6x8,9x1,5 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg", description:"<b>Earthy</b> </br> brooch | 9,2x5,2x1,2 cm | Lambda print on aluminium, titanium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg", description:"<b>Light</b> </br> brooch | 8,4x8,4x1,4 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"} 
+		],
+    "modal6": [
+		{src:"../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg", description:"<b>Venetian signs</b> </br> brooch | 9,9x6,4x1,1 cm | printed on Dibond, aluminium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg", description:"<b>Pearl of wisdom</b> </br> brooch | 8,7x9,1x1,3cm | printed on Dibond, aluminium, pure gold, chrysoprase, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg", description:"<b>Eclipse</b> </br> ring | 5,3x2,7x2,1 cm | print on Dibond, aluminium and pure gold<</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg",description:"<b>Venetian amphora</b> </br> brooch | 10,2x7,4x1,3 cm | printed on Dibond, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg", description:"<b>Tracks</b> </br> brooch | 9,6x8,9x1,5 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg", description:"<b>Earthy</b> </br> brooch | 9,2x5,2x1,2 cm | Lambda print on aluminium, titanium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg", description:"<b>Light</b> </br> brooch | 8,4x8,4x1,4 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg",description:"<b>Rhythm</b> </br> brooch | 13x4,5x1,4 cm | print on aluminium, PVC, aluminium, pure gold, titanium</p>", moreInfo: "More details?"} 
+		],
+    "modal7": [
+		{src:"../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg", description:"<b>Pearl of wisdom</b> </br> brooch | 8,7x9,1x1,3cm | printed on Dibond, aluminium, pure gold, chrysoprase, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg", description:"<b>Eclipse</b> </br> ring | 5,3x2,7x2,1 cm | print on Dibond, aluminium and pure gold<</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg",description:"<b>Venetian amphora</b> </br> brooch | 10,2x7,4x1,3 cm | printed on Dibond, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg", description:"<b>Tracks</b> </br> brooch | 9,6x8,9x1,5 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg", description:"<b>Earthy</b> </br> brooch | 9,2x5,2x1,2 cm | Lambda print on aluminium, titanium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg", description:"<b>Light</b> </br> brooch | 8,4x8,4x1,4 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg",description:"<b>Rhythm</b> </br> brooch | 13x4,5x1,4 cm | print on aluminium, PVC, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg", description:"<b>Venetian signs</b> </br> brooch | 9,9x6,4x1,1 cm | printed on Dibond, aluminium, pure gold</p>", moreInfo: "More details?"} 
+		],
+	"modal8": [
+		{src:"../../images/gioielli/Glimpses through the window/8_anello_Eclisse_Stefano Fronza.jpg", description:"<b>Eclipse</b> </br> ring | 5,3x2,7x2,1 cm | print on Dibond, aluminium and pure gold<</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Glimpses through the window/5_spilla_Anfora a Venezia_2020.jpg",description:"<b>Venetian amphora</b> </br> brooch | 10,2x7,4x1,3 cm | printed on Dibond, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/2_spilla_Tracce_2016.jpg", description:"<b>Tracks</b> </br> brooch | 9,6x8,9x1,5 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/1_spilla_Terrestre_2016.jpg", description:"<b>Earthy</b> </br> brooch | 9,2x5,2x1,2 cm | Lambda print on aluminium, titanium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/3_Luce_Stefano Fronza_2016.jpg", description:"<b>Light</b> </br> brooch | 8,4x8,4x1,4 cm | Lambda print on aluminium, Pvc, titanium, pure gold </p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/4_spilla_Rhythm_Stefano Fronza_2018.jpg",description:"<b>Rhythm</b> </br> brooch | 13x4,5x1,4 cm | print on aluminium, PVC, aluminium, pure gold, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/6_spilla_Segni a Venezia_2020.jpg", description:"<b>Venetian signs</b> </br> brooch | 9,9x6,4x1,1 cm | printed on Dibond, aluminium, pure gold</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Glimpses through the window/7_spilla_Perla di Saggezza_2021.jpg", description:"<b>Pearl of wisdom</b> </br> brooch | 8,7x9,1x1,3cm | printed on Dibond, aluminium, pure gold, chrysoprase, titanium</p>", moreInfo: "More details?"} 
+	]		
+};
 </script>
 </body>
 </div>

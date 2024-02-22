@@ -28,6 +28,38 @@
 	<meta name="twitter:title" content="Sito web Stefano Fronza | Gioielli d'autore" />
 	<meta name="twitter:image" content="http://www.stefanofronza.com/images/anteprima.jpg" />
     <title>Stefano Fronza | Gioielli d'autore | Between Music and Rebirth</title>
+
+<style>
+.prev-slide, .next-slide {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+/* Position the previous button on the left side */
+.prev-slide {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the next button on the right side */
+.next-slide {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* When hovering over the buttons, change background color */
+.prev-slide:hover, .next-slide:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+</style>
 </head>
 <div>
     <body>
@@ -93,12 +125,12 @@
 					</ul>
 				</li>
 				<li style="margin-right: 40px;">
-					<a href="#" class="current">news</a>
+					<a href="#">news</a>
 					<ul class="vertical menu" style="font-size:17px;">
 						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_2023-en.html'">2023</a></li>
 						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_2022-en.html'">2022</a></li>
 						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_2021-en.html'">2021</a></li>
-						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_archive.html'" class="current">archivio</a></li>
+						<li><a href="javascript:void(0)" onclick="window.location.href = baseUrl + 'en/news/news_archive.html'">archive</a></li>
 					</ul>
 				</li>
 				<li><a href="contacts.html">contacts</a></li>
@@ -125,71 +157,64 @@
             <div class="large-1 cell">
             </div>
             <div class="large-12 cell center">
-                <a data-open="modalbroochPresence" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="padding-top: 15%;">
+                <a href="#" onclick="openAndShowModal('modal1',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg"
+                         alt="A miracle" width="30%" height="30%" style="padding-top: 15%;">
                 </a>
-                <a data-open="modalbroochInBetween" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019_min.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="padding-bottom: 15%;">
+                <a href="#" onclick="openAndShowModal('modal2',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019_min.jpg"
+                         alt="Nature" width="30%" height="30%" style="padding-bottom: 15%;">
                 </a>
-				<a data-open="modalbroochUnity" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%" style="padding-top: 15%;">
-                </a>               
-				</br>
-                <!--<a data-open="modalSpillaLabbra" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/4_spilla_Labbra.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
-                </a>  -->          
-				<a data-open="modalCollana" class="thumbnail">
-						<img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale_min.jpg"
-							 alt="collana_Collegamento ipertestuale" width="30%" height="30%">
-					</a>
-				</br>
-                <a data-open="modalbroochParole" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
-                </a>
-                <a data-open="modalbroochScie" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
+                <a href="#" onclick="openAndShowModal('modal3',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg"
+                         alt="Children" width="30%" height="30%" style="padding-top: 15%;">
                 </a>
 				</br>
-                <a data-open="modalbroochLineeGuida" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
-                </a> 
+				<a href="#" onclick="openAndShowModal('modal4',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale_min.jpg"
+                         alt="Chevrolet" width="30%" height="30%">
+                </a>
+                </br>
+				<a href="#" onclick="openAndShowModal('modal5',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg"
+                         alt="Venezia" width="30%" height="30%" >
+                </a>
+                <a href="#" onclick="openAndShowModal('modal6',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg"
+                         alt="Saturno" width="30%" height="30%">
+                </a>
+				</br>
+				<a href="#" onclick="openAndShowModal('modal7',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg"
+                         alt="Silicon" width="30%" height="30%">
+                </a>
 				<img
-                class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/vuota.jpg"
+                class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/vuota.jpg"
                 alt="" width="30%" height="30%">
 				
-				<a data-open="modalSpillaLineeOriente" class="thumbnail"><img
-                class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg"
-                alt="collana_Collegamento ipertestuale" width="30%" height="30%">
-				</a>
-				</br>
-				<a data-open="modalbroochVenezia" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%">
+                <a href="#" onclick="openAndShowModal('modal8',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg"
+                         alt="A miracle" width="30%" height="30%">
+                </a>			
+                </br>
+                <a href="#" onclick="openAndShowModal('modal9',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg"
+                         alt="Nature" width="30%" height="30%" >
                 </a>
 				</br>
-                <a data-open="modalbroochPerla" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%"  style="padding-bottom: 15%;">
+                <a href="#" onclick="openAndShowModal('modal10',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg"
+                         alt="Spilla Perla" width="30%" height="30%"  style="padding-bottom: 25%;">
                 </a>
-				<a data-open="modalSpringLeaf" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg"
-                         alt="spilla spring leaf" width="30%" height="30%"  style="padding-top: 15%;">
+				<a href="#" onclick="openAndShowModal('modal11',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg"
+                         alt="Spilla SpringLeaf" width="30%" height="30%"  style="padding-top: 15%;">
                 </a>
-				<a data-open="modalSpillaButtomFree" class="thumbnail">
-                    <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg"
-                         alt="collana_Collegamento ipertestuale" width="30%" height="30%"  style="padding-bottom: 15%;">
+				<a href="#" onclick="openAndShowModal('modal12',modalData)" class="thumbnail">
+                    <img class="lazyload" data-src="../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg"
+                         alt="Spilla ButtomFree" width="30%" height="30%"  style="padding-bottom: 25%;">
                 </a>
-                
-				
-            </div>
-        </div>
+            </div></div>
         <div class="rightFoto">
             <small>Jewelry photos by <a href="https://www.fotonadiabaldo.it/" class="href-menu" target="_blank">Nadia Baldo</a></small>
         </div>
@@ -231,157 +256,75 @@
             </br>
             </br>
         </div>
-        <div class="reveal small" id="modalbroochPresence" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochInBetween" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochUnity" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochLips" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/4_spilla_Labbra.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Lips</b> </br> brooch | 9,1x3,2x1,5 cm print on Dibond, PVC, aluminium, titanium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalCollana" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochParole" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochScie" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochLineeGuida" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-		<div class="reveal small" id="modalSpillaLineeOriente" data-reveal>
-          <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg">
-          <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <p><b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium
-        </p>
-		<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-		<div class="reveal small" id="modalSpillaButtomFree" data-reveal>
-          <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg">
-          <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <p><b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium
-        </p>
-		<p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochPerla" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-        <div class="reveal small" id="modalbroochVenezia" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
-		
-		<div class="reveal small" id="modalSpringLeaf" data-reveal>
-            <img class="lazyload" data-src="../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg">
-            <div class="show-for-small-only">
-                <button class="close-button-small" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <p>
-                <b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium
-            </p>
-            <p class="right"><small><a href="#" data-open="modalMessaggio" class="href-menu">More details?</a></small></p>
-        </div>
+        <div class="reveal small" id="modal1" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal1',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal1',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal1-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal2" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal2',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal2',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal2-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal3" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal3',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal3',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal3-slides"></div>			
+		</div>			
+		<div class="reveal small" id="modal4" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal4',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal4',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal4-slides"></div>
+		</div>	
+			<div class="reveal small" id="modal5" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal5',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal5',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal5-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal6" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal6',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal6',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal6-slides"></div>			
+		</div>			
+		<div class="reveal small" id="modal7" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal7',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal7',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal7-slides"></div>
+		</div>	
+		<div class="reveal small" id="modal8" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal8',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal8',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal8-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal9" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal9',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal9',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal9-slides"></div>			
+		</div>	
+		<div class="reveal small" id="modal10" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal10',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal10',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal10-slides"></div>			
+		</div>			
+		<div class="reveal small" id="modal11" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal11',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal11',modalData)">&#10095;</span>	
+			<div class="slideshow-container" id="modal11-slides"></div>
+		</div>	
+			<div class="reveal small" id="modal12" data-reveal>
+            <span class="prev-slide" onclick="plusSlides(-1, 'modal12',modalData)">&#10094;</span>
+			<span class="next-slide" onclick="plusSlides(1, 'modal12',modalData)">&#10095;</span>
+	
+			 <div class="slideshow-container" id="modal12-slides"></div>			
+		</div>
 		
         </br>
         <hr />
@@ -406,10 +349,10 @@
         </div>
 </div>
 </form>
-<script src="../js/vendor/jquery.js"></script>
-<script src="../js/vendor/foundation.js"></script>
-<script src="../js/app.js"></script>
-<script src="../js/lazysizes.min.js" async></script>
+<script src="../../js/vendor/jquery.js"></script>
+<script src="../../js/vendor/foundation.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../js/lazysizes.min.js" async></script>
 <script type="text/javascript">
     function parseJSAtOnload() {
         var element = document.createElement("script");
@@ -421,6 +364,180 @@
         document.body.appendChild(element);
     }
 </script>
+
+<script>	
+	var modalData = {
+    "modal1": [
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg",description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg",description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg",description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg",description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},		
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg",description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"} 
+	],
+    "modal2": [
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"}
+	],
+	"modal3": [
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}
+	],
+    "modal4": [
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}
+	],
+	"modal5": [
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"} 
+	],
+    "modal6": [
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"} 
+	],
+    "modal7": [
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"} 
+		],
+	"modal8": [
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"}
+	],
+	"modal9": [
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}
+	]	,
+	"modal10": [
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"} 
+	]	,
+	"modal12": [
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}
+	],
+	"modal11": [
+		{src:"../../images/gioielli/Between Music and Rebirth/1_Spring Leaf_spilla.jpg",description:"<b>Spring Leaf</b> </br> brooch | 10x5,8x1,6 cm | printed on Dibond, aluminum and titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/2_spilla_Transizione_2019.jpg", description:"<b>In Between</b> </br> brooch | 10,6x4,5x1,4 cm | print on aluminium and Dibond, Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/1_spilla_Presenza_2019.jpg",description:"<b>Presence</b> </br> brooch | 9x4,5x2 cm | printed on aluminium and Dibond, Pvc, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/3_spilla_Unione_2019.jpg", description:"<b>Unity</b> </br> brooch | 10x3,8x1 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/5_collana_collegamento ipertestuale.jpg",description:"<b>Hypertext Link</b> </br> necklace | 46x34x1 cm | print on Dibond, aluminium, steel</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/6_Parole di carta.jpg", description:"<b>Paper words</b> </br> brooch | 8,5x7,5x2,1 cm | print on aluminium and Dibond, Pvc, aluminium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/7_Scie tra le vetrine.jpg", description:"<b>Trails through shop windows</b> </br> brooch | 7,2x4,7x1,9 cm | printed on Dibond and Forex, aluminium, titanium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/8_spilla_Linee Guida.jpg", description:"<b>Guidelines</b> </br> brooch | 7,4x7x2,1 cm | printed on Forex and Dibond, aluminium</p>", moreInfo: "More details?"},
+		{src:"../../images/gioielli/Between Music and Rebirth/12_Linee d'Oriente.jpg",description:"<b>Linee d'Oriente</b> </br>brooch | 7,4x6,2x1,9 cm  | printed on Dibond and Pvc, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/11_Spilla_Canali a Venezia.jpg",description:"<b>Canals in Venice</b> </br> brooch | 8,3x5x1,3 cm | printed on Dibond, aluminium, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/10_spilla_Il monte della Perla.jpg",description:"<b>Pearl Mountain</b> </br> brooch | 6,8x7,2x1,9 cm | Lambda print on aluminium and Forex, aluminium, PVC, pearl, titanium</p>", moreInfo: "More details?"}, 
+		{src:"../../images/gioielli/Between Music and Rebirth/13_Buttom free.jpg",description:"<b>Button free</b> </br>brooch | 13,4x3,9x1,2 cm  | printed on Dibond, aluminium, pearl, titanium</p>", moreInfo: "More details?"} 
+	]	
+};
+</script>
+
 </body>
 </div>
 </html>
