@@ -585,6 +585,14 @@ ul.submenu-gioielli {
 }
 .more-text, .more-text-sm { display: none; }
 .read-more, .read-more-sm { color: blue; cursor: pointer; text-decoration: underline; }
+.storia-small {
+    width: 70%;
+}
+
+.alignright-small {
+    float: right;
+    width: 50%;
+}
 
 @media screen and (max-width: 640px) {
   div.background_recensioni {
