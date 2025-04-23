@@ -588,7 +588,7 @@ ul.submenu-gioielli {
 
 @media screen and (max-width: 640px) {
   div.background_recensioni {
-    background: linear-gradient(rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url(../images/sfondo_recensioni.jpg);
+    background: linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .95)), url(../images/sfondo_recensioni.jpg);
     background-size: cover;
   }
 }
