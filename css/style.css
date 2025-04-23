@@ -582,5 +582,12 @@ ul.submenu-gioielli {
 .callout {
     background: none !important;
 }
-.more-text { display: none; }
-.read-more { color: blue; cursor: pointer; text-decoration: underline; }
+.more-text, .more-text-sm { display: none; }
+.read-more, .read-more-sm { color: blue; cursor: pointer; text-decoration: underline; }
+
+@media screen and (max-width: 640px) {
+  div.background_recensioni {
+    background: linear-gradient(rgba(255, 255, 255, .85), rgba(255, 255, 255, .85)), url(../images/sfondo_recensioni.jpg);
+    background-size: cover;
+  }
+}

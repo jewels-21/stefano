@@ -219,7 +219,7 @@ L’importante esperienza negli USA fa in modo che, al suo ritorno, gli si prese
 				Da allora partecipa a numerose esposizioni collettive: nello Studio Marijke di Padova, nel Museo del Gioiello di Vicenza,
 				presso la Fondazione Stelline a Milano e in diverse esposizioni curate da Alba Cappellieri nel salone dedicato al gioiello 
 				ad Homi Fiera a Milano.</br>
-				<span class="more-text">
+				<span class="more-text-sm">
 				<figure class="alignleft storia">
 						<img src="../../images/img_storia_2.jpg"></img>
 							
@@ -259,7 +259,7 @@ Nel maggio 2024 Stefano Fronza vola a New York e partecipa al MAD ABOUT JEWELRY 
 </br>
 L’importante esperienza negli USA fa in modo che, al suo ritorno, gli si presentino varie opportunità, tra cui quella - offertagli da AGC - di esporre alcuni suoi pezzi presso la Galleria La Mongolfiera (Sanremo), la Personal Gallery di Tarragona (Spagna) e l’Archivio Negroni (Milano). Stefano Fronza incontra inoltre lo storico dell’arte prof. Nicola Loizzo, che, rimasto positivamente colpito dalle sue opere, apre lo spazio espositivo all’interno dell’Enoteca Grado 12 (Trento) ad una personale in cui l’artista ha modo di esibire una specifica serie di lavori, accompagnati da descrizioni di cui si apprezzano profondità ed accuratezza. Fronza riceve poi dal Liceo Artistico "A.Vittoria" di Trento la proposta di esporre una propria opera nell’ambito della mostra organizzata per celebrare il 70° Anniversario dell’istituto scolastico, mostra allestita all’interno di un prestigioso palazzo nel cuore della città di Trento. Nell'ambito delle suddette celebrazioni viene altresì invitato a tenere - di fronte agli studenti del quinto e terzo anno - una lezione intesa come occasione per raccontare la propria attività artistica ed accompagnare ragazzi e ragazze ad un approfondimento sul tema del gioiello contemporaneo d’autore. Nel frattempo, viene selezionato da Luis Acosta (Olanda) per una mostra collettiva itinerante di respiro internazionale che, a partire da novembre 2024 e fino al 2026, porterà all’esposizione una decina di gioielli realizzati da Stefano Fronza presso varie gallerie in tutta Europa.
 </span>
-        <span class="read-more" onclick="toggleText()">Continua a leggere...</span>
+        <span class="read-more-sm" onclick="toggleTextSmall()">Continua a leggere...</span>
 				</p>
 				</br>
 				
@@ -317,6 +317,21 @@ L’importante esperienza negli USA fa in modo che, al suo ritorno, gli si prese
         function toggleText() {
             var moreText = document.querySelector(".more-text");
             var readMore = document.querySelector(".read-more");
+            
+            if (moreText.style.display === "none" || moreText.style.display === "") {
+                moreText.style.display = "inline";
+                readMore.innerText = "Mostra meno";
+            } else {
+                moreText.style.display = "none";
+                readMore.innerText = "Continua a leggere...";
+            }
+        }
+    </script>
+	
+	<script>
+        function toggleTextSmall() {
+            var moreText = document.querySelector(".more-text-sm");
+            var readMore = document.querySelector(".read-more-sm");
             
             if (moreText.style.display === "none" || moreText.style.display === "") {
                 moreText.style.display = "inline";
