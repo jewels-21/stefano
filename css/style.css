@@ -386,6 +386,7 @@ table.chi-sono, tbody.chi-sono, td.chi-sono, th.chi-sono, tr.chi-sono {
     color: #1779ba !important;
     position: relative;
     text-decoration: none;
+	cursor: pointer;
 }
 
 .href-foto {
