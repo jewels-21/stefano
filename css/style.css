@@ -478,7 +478,7 @@ div.myDIV {
 
 img.storia-small {
     float: left;
-    width: 80% !important;
+    width: 90% !important;
     height: auto;
 }
 
@@ -586,10 +586,14 @@ ul.submenu-gioielli {
 .more-text, .more-text-sm { display: none; }
 .read-more, .read-more-sm { color: blue; cursor: pointer; text-decoration: underline; }
 .storia-small {
-    width: 70%;
+    width: 90%;
 }
 
 .alignright-small {
+    float: right;
+}
+
+.alignright-small-r {
     float: right;
     width: 50%;
 }
