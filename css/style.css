@@ -207,12 +207,7 @@ hr {
 
 .lang-button {
   border-radius: 5px;
-  text-decoration: none;
-  
-}
-
-.lang-button:hover {
-  background-color: #ddd;
+  text-decoration: none; 
 }
 
 .menu_lan .button, .menu_lan a {
