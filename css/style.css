@@ -172,6 +172,18 @@ hr {
     max-width: 100% !important;
 }
 
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.top-bar-left, .top-bar-right {
+  display: flex;
+  align-items: center;
+}
+
 .top-bar, .top-bar ul {
     background-color: #fff !important;
 }
@@ -435,7 +447,7 @@ div.languages {
 
 .orbit-container-small {
     height: 230px !important;
-	margin-left: px !important;
+	margin-left: 0px !important;
 }
 
 .orbit-container-gioielli {
@@ -539,6 +551,18 @@ table.footer-right, tbody.footer-right, td.footer-right, th.footer-right, tr.foo
     text-align: right;
 }
 @media only screen and (max-width:40em){
+	.top-bar-left, .top-bar-right {
+    flex: 1;
+  }
+
+  .top-bar {
+    flex-wrap: nowrap;
+  }
+
+  .top-bar-right {
+    justify-content: flex-end;
+  }
+  
 	#return-to-top{
 		position:fixed;
 		bottom:55px;
