@@ -173,57 +173,64 @@ hr {
 }
 
 
-/* Mantieni il tuo CSS */
 .top-bar, .top-bar ul {
-  background-color: #fff !important;
+    background-color: #fff !important;
 }
 
 .top-bar-right {
-  font-size: 13px !important;
-  margin-bottom: 1rem !important;
+    font-size: 13px !important;
+    margin-bottom: 1rem !important;
 }
 
-/* NUOVO: Layout base */
+/* Base: sfondo e stile */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 16px;
-  flex-wrap: wrap;
+  background-color: #fff;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* Allineamento interno */
-.top-bar-left, .top-bar-right {
+.top-bar-left,
+.top-bar-right {
   display: flex;
   align-items: center;
 }
 
-/* Rimuove bordi, padding da eventuali eredità */
+.social-home a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Stile dei link lingua */
+.top-bar-right {
+  font-size: 13px;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .top-bar-right a {
   text-decoration: none;
   color: #000;
   padding: 4px 6px;
-  font-weight: normal;
+  white-space: nowrap; /* evita che vadano a capo */
 }
 
-/* Responsive tweak per mobile */
+/* Mobile: padding più stretto se serve */
 @media (max-width: 480px) {
   .top-bar {
-    flex-direction: row;
-    flex-wrap: nowrap;
+    padding: 10px 12px;
   }
 
-  .top-bar-left,
-  .top-bar-right {
-    flex: 1;
-  }
-
-  .top-bar-right {
-    justify-content: flex-end;
+  .top-bar-left, .top-bar-right {
+    flex: 0 1 auto;
   }
 }
-
 
 .menu_lan .button, .menu_lan a {
     padding: .4rem !important;
