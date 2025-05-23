@@ -172,26 +172,58 @@ hr {
     max-width: 100% !important;
 }
 
+
+/* Mantieni il tuo CSS */
+.top-bar, .top-bar ul {
+  background-color: #fff !important;
+}
+
+.top-bar-right {
+  font-size: 13px !important;
+  margin-bottom: 1rem !important;
+}
+
+/* NUOVO: Layout base */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 16px;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
+/* Allineamento interno */
 .top-bar-left, .top-bar-right {
   display: flex;
   align-items: center;
 }
 
-.top-bar, .top-bar ul {
-    background-color: #fff !important;
+/* Rimuove bordi, padding da eventuali eredità */
+.top-bar-right a {
+  text-decoration: none;
+  color: #000;
+  padding: 4px 6px;
+  font-weight: normal;
 }
 
-.top-bar-right {
-    font-size: 13px !important;
-    margin-bottom: 1rem !important;
+/* Responsive tweak per mobile */
+@media (max-width: 480px) {
+  .top-bar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .top-bar-left,
+  .top-bar-right {
+    flex: 1;
+  }
+
+  .top-bar-right {
+    justify-content: flex-end;
+  }
 }
+
 
 .menu_lan .button, .menu_lan a {
     padding: .4rem !important;
@@ -551,18 +583,6 @@ table.footer-right, tbody.footer-right, td.footer-right, th.footer-right, tr.foo
     text-align: right;
 }
 @media only screen and (max-width:40em){
-	.top-bar-left, .top-bar-right {
-    flex: 1;
-  }
-
-  .top-bar {
-    flex-wrap: nowrap;
-  }
-
-  .top-bar-right {
-    justify-content: flex-end;
-  }
-  
 	#return-to-top{
 		position:fixed;
 		bottom:55px;
