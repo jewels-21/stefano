@@ -178,7 +178,7 @@ hr {
 }
 
 .top-bar-right {
-    font-size: 13px !important;
+     font-size: 0.895rem !important;
     margin-bottom: 1rem !important;
 }
 
@@ -206,8 +206,6 @@ hr {
 }
 
 .lang-button {
-  font-family: 'Open Sans', sans-serif;
- padding: 6px 12px;
   border-radius: 5px;
   text-decoration: none;
   
