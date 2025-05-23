@@ -182,54 +182,39 @@ hr {
     margin-bottom: 1rem !important;
 }
 
-/* Base: sfondo e stile */
-.top-bar {
+
+.top-bar-right {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 16px;
-  background-color: #fff;
+  justify-content: space-between; /* social a sinistra, lingue a destra */
+  align-items: center;            /* allineamento verticale */
+  width: 100%;                   /* occupa tutta la larghezza disponibile */
+  padding: 0 10px;               /* un po’ di padding orizzontale */
   box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
-.top-bar-left,
-.top-bar-right {
+.social-buttons,
+.lang-buttons {
   display: flex;
-  align-items: center;
+  gap: 10px;                    /* spazio tra i bottoni */
+  align-items: center;          /* allinea verticalmente */
 }
 
-.social-home a {
-  margin-right: 10px;
+.social-button {
+  font-size: 1.2rem;
+  color: #333;
   text-decoration: none;
-  color: #000;
 }
 
-/* Stile dei link lingua */
-.top-bar-right {
-  font-size: 13px;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-.top-bar-right a {
+.lang-button {
+  font-family: 'Open Sans', sans-serif;
+ padding: 6px 12px;
+  border-radius: 5px;
   text-decoration: none;
-  color: #000;
-  padding: 4px 6px;
-  white-space: nowrap; /* evita che vadano a capo */
+  
 }
 
-/* Mobile: padding più stretto se serve */
-@media (max-width: 480px) {
-  .top-bar {
-    padding: 10px 12px;
-  }
-
-  .top-bar-left, .top-bar-right {
-    flex: 0 1 auto;
-  }
+.lang-button:hover {
+  background-color: #ddd;
 }
 
 .menu_lan .button, .menu_lan a {
