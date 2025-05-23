@@ -435,6 +435,7 @@ div.languages {
 
 .orbit-container-small {
     height: 230px !important;
+	margin-left: px !important;
 }
 
 .orbit-container-gioielli {
