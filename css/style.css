@@ -467,10 +467,13 @@ div.languages {
 	margin-left: 0px !important;
 }
 
+ul.orbit-container-gioielli {
+	list-style-type: none !important;
+}
+
 .orbit-container-gioielli {
     position: relative;
     height: auto !important;
-	ul {
     margin-left: 0rem !important;
 }
 
@@ -479,7 +482,6 @@ div.languages {
 }
 
 footer {
-    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     text-align: center !important;
     color: #8a8a8a !important;
