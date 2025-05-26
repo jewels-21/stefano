@@ -470,6 +470,8 @@ div.languages {
 .orbit-container-gioielli {
     position: relative;
     height: auto !important;
+	ul {
+    margin-left: 0rem !important;
 }
 
 .thumbnail {
